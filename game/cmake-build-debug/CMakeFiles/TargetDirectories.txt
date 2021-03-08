@@ -1,0 +1,7 @@
+/home/val-de-mar/CLionProjects/game/cmake-build-debug/CMakeFiles/install/strip.dir
+/home/val-de-mar/CLionProjects/game/cmake-build-debug/CMakeFiles/install/local.dir
+/home/val-de-mar/CLionProjects/game/cmake-build-debug/CMakeFiles/game.dir
+/home/val-de-mar/CLionProjects/game/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/val-de-mar/CLionProjects/game/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/val-de-mar/CLionProjects/game/cmake-build-debug/CMakeFiles/install.dir
+/home/val-de-mar/CLionProjects/game/cmake-build-debug/CMakeFiles/list_install_components.dir

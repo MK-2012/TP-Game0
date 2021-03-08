@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/game.dir/main.cpp.o  -o game  /usr/lib/x86_64-linux-gnu/libcairo.so 
