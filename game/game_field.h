@@ -92,8 +92,10 @@ class Aim {
     size_t y_size;
     void move(int delta_x, int delta_y) {
         if((delta_x + x) >= 0 && (delta_y + y) >= 0 && (delta_x + x) < x_size && (delta_y + y) < y_size) {
-            x += delta_x;
-            y += delta_y;
+            if (unit -> allowedToMoveAim(x + delta_x, y + delta_y)) {
+                x += delta_x;
+                y += delta_y;
+            }
         }
     }
 public:

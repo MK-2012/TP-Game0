@@ -63,7 +63,16 @@ public:
         }
     };
     virtual bool allowed_to_move() = 0;
+    virtual bool allowedToMoveAim(size_t x, size_t y) = 0;
+    void attack(Unit_<Cell> *aimed_unit) {
+        if (aimed_unit != this) {
+            if (aimed_unit->get_damage(damage())) {
+                aimed_unit -> ~Unit_<Cell>();
+            }
+        }
 
+    }
+    virtual bool get_damage(uint16_t damage) = 0;
 protected:
     explicit Unit_(Cell* place) : place(place) {}
 };
@@ -94,8 +103,16 @@ public:
         return image_placement_;
     }
 
+
     bool allowed_to_move() override {
         return true;
+    };
+    bool allowedToMoveAim(size_t x, size_t y) override {
+        return false;
+    }
+
+    bool get_damage(uint16_t damage) override {
+        return false;
     };
     ~NonExistentUnit_() override = default;
 };
@@ -132,7 +149,21 @@ public:
     bool allowed_to_move() override {
         return true;
     };
-    ~Clubber_() override = default;
+    bool allowedToMoveAim(size_t x, size_t y) override {
+        return std::abs(static_cast<int>(x)  - static_cast<int>(Unit_<Cell>::place->x)) <= distance_ && std::abs(static_cast<int>(y) - static_cast<int>(Unit_<Cell>::place->y)) <= distance_;
+    }
+
+    bool get_damage(uint16_t damage) override {
+        if (hp_ < damage) {
+            return true;
+        } else {
+            hp_ -= damage;
+            return false;
+        }
+    }
+    ~Clubber_() override {
+        Unit_<Cell>::place -> located_unit = new NonExistentUnit_<Cell>(Unit_<Cell>::place);
+    };
 };
 
 template<typename Cell>
