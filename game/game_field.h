@@ -116,6 +116,12 @@ public:
     void move_right() {
         move(1, 0);
     };
+    void attack(){
+        auto aimed_unit = unit -> place -> field[x][y] -> located_unit;
+        if(aimed_unit -> get_damage(unit -> damage())){
+            aimed_unit -> ~Unit_<Cell>();
+        }
+    }
     ~Aim(){
         unit -> place -> field.aim = nullptr;
     }

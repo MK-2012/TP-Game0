@@ -11,6 +11,7 @@
 template<typename Cell>
 class Unit_ {
 public:
+
     Cell* place;
     virtual int unitTypeId() = 0;
     virtual uint16_t hp() = 0;
@@ -64,11 +65,9 @@ public:
     };
     virtual bool allowed_to_move() = 0;
     virtual bool allowedToMoveAim(size_t x, size_t y) = 0;
-    void attack(Unit_<Cell> *aimed_unit) {
+    uint16_t attack(Unit_<Cell> *aimed_unit) {
         if (aimed_unit != this) {
-            if (aimed_unit->get_damage(damage())) {
-                aimed_unit -> ~Unit_<Cell>();
-            }
+            return damage();
         }
 
     }

@@ -133,6 +133,9 @@
 		<Unit filename="/home/val-de-mar/CLionProjects/game/game_field.h">
 			<Option target="game"/>
 		</Unit>
+		<Unit filename="/home/val-de-mar/CLionProjects/game/game_field.h.cpp">
+			<Option target="game"/>
+		</Unit>
 		<Unit filename="/home/val-de-mar/CLionProjects/game/graphics.h">
 			<Option target="game"/>
 		</Unit>

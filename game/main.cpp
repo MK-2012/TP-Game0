@@ -13,6 +13,7 @@ public:
         if(place >= str.size()){
             place = 0;
             std::cin >> str;
+            str.push_back('\n');
         }
         c = str[place];
         ++ place;
@@ -25,8 +26,8 @@ void aimControl (Unit* unit, FieldPainter<Field>& paint, Stream& input) {
     Aim* aim(new Aim(unit));
     char command;
 
-    paint.allField();
-    paint.show();
+    //paint.allField();
+    //paint.show();
     while(true) {
         bool quit = false;
         input >> command;
@@ -47,15 +48,16 @@ void aimControl (Unit* unit, FieldPainter<Field>& paint, Stream& input) {
             case 'd':
                 aim->move_right();
                 break;
+            case '\n':
+                paint.allField();
+                paint.show();
+                break;
             case 'f':
-                unit->attack(field[aim->x][aim->y]->located_unit);
+                aim -> attack();
                 quit = true;
                 delete aim;
                 break;
         }
-        paint.allField();
-        paint.show();
-        sleep(1);
         if (quit) {
             break;
         }
@@ -69,7 +71,7 @@ void aimControl (Unit* unit, FieldPainter<Field>& paint, Stream& input) {
 
 int main() {
     Stream input;
-    Field field(10,10);
+    Field field(30,30);
     emplaceUnit<Clubber_<Cell>>(field[1][1]);
     emplaceStructure<River>(field[5][5]);
     emplaceStructure<River>(field[4][5]);
@@ -107,6 +109,10 @@ int main() {
             case 'f':
                 aimControl(unit, paint, input);
                 break;
+            case '\n':
+                paint.allField();
+                paint.show();
+                break;
             case 'm':
                 int x, y;
                 std::cin >> x >> y;
@@ -119,9 +125,6 @@ int main() {
                 }
                 break;
         }
-        paint.allField();
-        paint.show();
-        sleep(1);
         if (quit) {
             break;
         }

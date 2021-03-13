@@ -189,6 +189,33 @@ game/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
 .PHONY : game/fast
 
+game_field.h.o: game_field.h.cpp.o
+
+.PHONY : game_field.h.o
+
+# target to build an object file
+game_field.h.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/game_field.h.cpp.o
+.PHONY : game_field.h.cpp.o
+
+game_field.h.i: game_field.h.cpp.i
+
+.PHONY : game_field.h.i
+
+# target to preprocess a source file
+game_field.h.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/game_field.h.cpp.i
+.PHONY : game_field.h.cpp.i
+
+game_field.h.s: game_field.h.cpp.s
+
+.PHONY : game_field.h.s
+
+# target to generate assembly for a file
+game_field.h.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/game_field.h.cpp.s
+.PHONY : game_field.h.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -229,6 +256,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... game"
+	@echo "... game_field.h.o"
+	@echo "... game_field.h.i"
+	@echo "... game_field.h.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
