@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libstructures.so -o ../../lib/libstructures.so CMakeFiles/structures.dir/Structure.cpp.o 

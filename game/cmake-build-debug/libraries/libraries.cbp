@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="libraries"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\libraries\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="structures">
+				<Option output="/home/val-de-mar/CLionProjects/tp_game/game/lib/libstructures.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 structures"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="structures/fast">
+				<Option output="/home/val-de-mar/CLionProjects/tp_game/game/lib/libstructures.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 structures/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="game_field">
+				<Option output="/home/val-de-mar/CLionProjects/tp_game/game/lib/libgame_field.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 game_field"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="game_field/fast">
+				<Option output="/home/val-de-mar/CLionProjects/tp_game/game/lib/libgame_field.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 game_field/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="units">
+				<Option output="/home/val-de-mar/CLionProjects/tp_game/game/lib/libunits.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 units"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="units/fast">
+				<Option output="/home/val-de-mar/CLionProjects/tp_game/game/lib/libunits.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 units/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/libraries/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/val-de-mar/CLionProjects/tp_game/game/libraries/Structure.cpp">
+			<Option target="structures"/>
+		</Unit>
+		<Unit filename="/home/val-de-mar/CLionProjects/tp_game/game/libraries/Unit.cpp">
+			<Option target="units"/>
+		</Unit>
+		<Unit filename="/home/val-de-mar/CLionProjects/tp_game/game/libraries/game_field.cpp">
+			<Option target="game_field"/>
+		</Unit>
+		<Unit filename="/home/val-de-mar/CLionProjects/tp_game/game/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/val-de-mar/CLionProjects/tp_game/game/cmake/FindCairo.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/val-de-mar/CLionProjects/tp_game/game/libraries/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libraries\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
