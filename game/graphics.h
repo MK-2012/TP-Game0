@@ -37,28 +37,28 @@ public:
         cairo_t *cr;
         cr = cairo_create(surface);
 
-        cairo_pattern_t *pattern;
-        pattern = cairo_pattern_create_rgba(0, 0, 0, 1);
-        cairo_rectangle(cr, (cell->x) * 64, (cell->y) * 64, 64, 64);
+        cairo_pattern_t* pattern;
+        pattern = cairo_pattern_create_rgba(0,0,0, 1);
+        cairo_rectangle(cr, (cell -> x) * 64, (cell -> y) * 64, 64, 64);
         cairo_set_source(cr, pattern);
         cairo_fill(cr);
         cairo_pattern_destroy(pattern);
 
         cairo_surface_t *structure_image;
-        structure_image = cairo_image_surface_create_from_png(cell->located_structure->image_placement().c_str());
-        cairo_rectangle(cr, (cell->x) * 64 + 2, (cell->y) * 64 + 2, 60, 60);
-        cairo_set_source_surface(cr, structure_image, (cell->x) * 64, (cell->y) * 64);
+        structure_image = cairo_image_surface_create_from_png(cell -> located_structure -> image_placement().c_str());
+        cairo_rectangle(cr, (cell -> x) * 64 + 2, (cell -> y) * 64 + 2, 60, 60);
+        cairo_set_source_surface(cr, structure_image, (cell -> x) * 64, (cell -> y) * 64);
         cairo_fill(cr);
         cairo_surface_destroy(structure_image);
 
-
-        cairo_surface_t *unit_image;
-        unit_image = cairo_image_surface_create_from_png(cell->located_unit->image_placement().c_str());
-        cairo_rectangle(cr, (cell->x) * 64 + 6, (cell->y) * 64 + 6, 52, 52);
-        cairo_set_source_surface(cr, unit_image, (cell->x) * 64, (cell->y) * 64);
-        cairo_fill(cr);
-        cairo_surface_destroy(unit_image);
-
+        if(cell->located_unit->existence()) {
+            cairo_surface_t *unit_image;
+            unit_image = cairo_image_surface_create_from_png(cell->located_unit->image_placement().c_str());
+            cairo_rectangle(cr, (cell->x) * 64 + 6, (cell->y) * 64 + 6, 52, 52);
+            cairo_set_source_surface(cr, unit_image, (cell->x) * 64, (cell->y) * 64);
+            cairo_fill(cr);
+            cairo_surface_destroy(unit_image);
+        }
         cairo_destroy(cr);
     }
     void show() {

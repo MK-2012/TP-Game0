@@ -68,10 +68,10 @@ RM = /snap/clion/139/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/val-de-mar/CLionProjects/tp_game/game
+CMAKE_SOURCE_DIR = /home/val-de-mar/CLionProjects/game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug
+CMAKE_BINARY_DIR = /home/val-de-mar/CLionProjects/game/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -146,9 +146,9 @@ list_install_components/fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/CMakeFiles /home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/val-de-mar/CLionProjects/game/cmake-build-debug/CMakeFiles /home/val-de-mar/CLionProjects/game/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/val-de-mar/CLionProjects/game/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -188,6 +188,33 @@ game: cmake_check_build_system
 game/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
 .PHONY : game/fast
+
+game_field.h.o: game_field.h.cpp.o
+
+.PHONY : game_field.h.o
+
+# target to build an object file
+game_field.h.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/game_field.h.cpp.o
+.PHONY : game_field.h.cpp.o
+
+game_field.h.i: game_field.h.cpp.i
+
+.PHONY : game_field.h.i
+
+# target to preprocess a source file
+game_field.h.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/game_field.h.cpp.i
+.PHONY : game_field.h.cpp.i
+
+game_field.h.s: game_field.h.cpp.s
+
+.PHONY : game_field.h.s
+
+# target to generate assembly for a file
+game_field.h.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/game_field.h.cpp.s
+.PHONY : game_field.h.cpp.s
 
 main.o: main.cpp.o
 
@@ -229,6 +256,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... game"
+	@echo "... game_field.h.o"
+	@echo "... game_field.h.i"
+	@echo "... game_field.h.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
