@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libgame_field.so -o ../../lib/libgame_field.so CMakeFiles/game_field.dir/game_field.cpp.o 

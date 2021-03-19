@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/game.dir/main.cpp.o  -o game  -Wl,-rpath,/home/val-de-mar/Desktop/git_folders/tp_game0/game/lib: /usr/lib/x86_64-linux-gnu/libcairo.so ../lib/libgame_field.so 
+/usr/bin/c++  -g   CMakeFiles/game.dir/main.cpp.o CMakeFiles/game.dir/game_field.h.cpp.o  -o game  /usr/lib/x86_64-linux-gnu/libcairo.so 
