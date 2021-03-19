@@ -6,4 +6,5 @@ CMakeFiles/game.dir/main.cpp.o: ../Unit.h
 CMakeFiles/game.dir/main.cpp.o: ../game_field.h
 CMakeFiles/game.dir/main.cpp.o: ../graphics.h
 CMakeFiles/game.dir/main.cpp.o: ../main.cpp
+CMakeFiles/game.dir/main.cpp.o: ../player.h
 

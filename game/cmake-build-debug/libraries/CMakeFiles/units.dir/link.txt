@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libunits.so -o ../../lib/libunits.so CMakeFiles/units.dir/Unit.cpp.o 

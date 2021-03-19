@@ -1,4 +1,4 @@
-# Install script for directory: /home/val-de-mar/CLionProjects/tp_game/game/libraries
+# Install script for directory: /home/val-de-mar/Desktop/git_folders/tp_game0/game/libraries
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

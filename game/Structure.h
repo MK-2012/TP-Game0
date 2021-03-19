@@ -2,10 +2,13 @@
 // Created by val-de-mar on 08.03.2021.
 //
 
+#include "player.h"
+
 #ifndef GAME_STRUCTURE_H
 #define GAME_STRUCTURE_H
 
 #endif //GAME_STRUCTURE_H
+
 
 template<typename Cell>
 class Structure_ {

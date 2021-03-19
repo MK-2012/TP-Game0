@@ -1,4 +1,4 @@
-/snap/clion/139/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/val-de-mar/CLionProjects/tp_game/game
+/snap/clion/145/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/val-de-mar/Desktop/git_folders/tp_game0/game
 -- The C compiler identification is GNU 9.3.0
 -- The CXX compiler identification is GNU 9.3.0
 -- Check for working C compiler: /usr/bin/cc
@@ -21,4 +21,4 @@
 -- /usr/lib/x86_64-linux-gnu/libcairo.so
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug
+-- Build files have been written to: /home/val-de-mar/Desktop/git_folders/tp_game0/game/cmake-build-debug

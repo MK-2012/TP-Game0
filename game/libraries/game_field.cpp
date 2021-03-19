@@ -1,4 +1,4 @@
-#pragma once
+
 
 #include <vector>
 #include <string>
@@ -10,8 +10,6 @@ class Field;
 class Cell;
 class Aim;
 
-template<typename UnitType>
-void emplaceUnit(Cell* cell);
 
 
 
@@ -77,20 +75,7 @@ using Landscape = Landscape_<Cell>;
 using Grass = Grass_<Cell>;
 using River = River_<Cell>;
 
-template<typename UnitType>
-void emplaceUnit(Cell* cell) {
-    if (cell -> isAllowedToGoIn()) {
-        delete cell->located_unit;
-        cell->located_unit = new UnitType(cell);
-    }
-}
 
-
-template<typename StructureType>
-void emplaceStructure(Cell* cell) {
-    delete cell -> located_structure;
-    cell -> located_structure = new StructureType(cell);
-}
 
 
 Cell::Cell(Field &field, int x, int y) : x(x), y(y), field(field), located_unit(new NonExistentUnit_<Cell>(this)), located_structure(new Grass_<Cell>(this)){}

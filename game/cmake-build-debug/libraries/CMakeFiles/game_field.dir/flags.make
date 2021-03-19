@@ -6,5 +6,5 @@ CXX_FLAGS = -g -fPIC   -std=gnu++11
 
 CXX_DEFINES = -Dgame_field_EXPORTS
 
-CXX_INCLUDES = -I/usr/include/cairo 
+CXX_INCLUDES = 
 

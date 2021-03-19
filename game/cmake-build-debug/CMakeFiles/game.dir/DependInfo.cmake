@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/val-de-mar/CLionProjects/tp_game/game/main.cpp" "/home/val-de-mar/CLionProjects/tp_game/game/cmake-build-debug/CMakeFiles/game.dir/main.cpp.o"
+  "/home/val-de-mar/Desktop/git_folders/tp_game0/game/main.cpp" "/home/val-de-mar/Desktop/git_folders/tp_game0/game/cmake-build-debug/CMakeFiles/game.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,6 +15,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/val-de-mar/Desktop/git_folders/tp_game0/game/cmake-build-debug/libraries/CMakeFiles/game_field.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

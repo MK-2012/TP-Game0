@@ -2,6 +2,8 @@
 // Created by val-de-mar on 08.03.2021.
 //
 
+#include "player.h"
+
 #ifndef GAME_UNIT_H
 #define GAME_UNIT_H
 
@@ -11,7 +13,7 @@
 template<typename Cell>
 class Unit_ {
 public:
-
+    Treasury* treasury_;
     Cell* place;
     virtual int unitTypeId() = 0;
     virtual uint16_t hp() = 0;

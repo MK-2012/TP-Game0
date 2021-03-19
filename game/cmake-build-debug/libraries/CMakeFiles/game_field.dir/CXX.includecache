@@ -6,23 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/val-de-mar/CLionProjects/tp_game/game/include/Structure.h
+/home/val-de-mar/Desktop/git_folders/tp_game0/game/include/Structure.h
 
-/home/val-de-mar/CLionProjects/tp_game/game/include/Unit.h
+/home/val-de-mar/Desktop/git_folders/tp_game0/game/include/Unit.h
 
-/home/val-de-mar/CLionProjects/tp_game/game/include/graphics.h
+/home/val-de-mar/Desktop/git_folders/tp_game0/game/include/graphics.h
 cairo/cairo.h
 -
 
-/home/val-de-mar/CLionProjects/tp_game/game/libraries/game_field.cpp
+/home/val-de-mar/Desktop/git_folders/tp_game0/game/libraries/game_field.cpp
 vector
 -
 string
 -
 ../include/graphics.h
-/home/val-de-mar/CLionProjects/tp_game/game/include/graphics.h
+/home/val-de-mar/Desktop/git_folders/tp_game0/game/include/graphics.h
 ../include/Unit.h
-/home/val-de-mar/CLionProjects/tp_game/game/include/Unit.h
+/home/val-de-mar/Desktop/git_folders/tp_game0/game/include/Unit.h
 ../include/Structure.h
-/home/val-de-mar/CLionProjects/tp_game/game/include/Structure.h
+/home/val-de-mar/Desktop/git_folders/tp_game0/game/include/Structure.h
 

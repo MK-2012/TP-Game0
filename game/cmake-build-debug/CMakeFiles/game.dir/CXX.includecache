@@ -6,31 +6,29 @@
 
 #IncludeRegexTransform: 
 
-/home/val-de-mar/CLionProjects/tp_game/game/Structure.h
+/home/val-de-mar/Desktop/git_folders/tp_game0/game/Structure.h
+player.h
+/home/val-de-mar/Desktop/git_folders/tp_game0/game/player.h
 
-/home/val-de-mar/CLionProjects/tp_game/game/Unit.h
+/home/val-de-mar/Desktop/git_folders/tp_game0/game/Unit.h
+player.h
+/home/val-de-mar/Desktop/git_folders/tp_game0/game/player.h
 
-/home/val-de-mar/CLionProjects/tp_game/game/game_field.h
-iostream
--
-utility
--
-vector
--
-string
--
+/home/val-de-mar/Desktop/git_folders/tp_game0/game/game_field.h
 graphics.h
-/home/val-de-mar/CLionProjects/tp_game/game/graphics.h
+/home/val-de-mar/Desktop/git_folders/tp_game0/game/graphics.h
 Unit.h
-/home/val-de-mar/CLionProjects/tp_game/game/Unit.h
+/home/val-de-mar/Desktop/git_folders/tp_game0/game/Unit.h
 Structure.h
-/home/val-de-mar/CLionProjects/tp_game/game/Structure.h
+/home/val-de-mar/Desktop/git_folders/tp_game0/game/Structure.h
+player.h
+/home/val-de-mar/Desktop/git_folders/tp_game0/game/player.h
 
-/home/val-de-mar/CLionProjects/tp_game/game/graphics.h
+/home/val-de-mar/Desktop/git_folders/tp_game0/game/graphics.h
 cairo/cairo.h
 -
 
-/home/val-de-mar/CLionProjects/tp_game/game/main.cpp
+/home/val-de-mar/Desktop/git_folders/tp_game0/game/main.cpp
 iostream
 -
 utility
@@ -40,7 +38,9 @@ vector
 string
 -
 game_field.h
-/home/val-de-mar/CLionProjects/tp_game/game/game_field.h
+/home/val-de-mar/Desktop/git_folders/tp_game0/game/game_field.h
 unistd.h
 -
+
+/home/val-de-mar/Desktop/git_folders/tp_game0/game/player.h
 
