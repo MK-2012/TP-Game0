@@ -1,11 +1,4 @@
-//
-// Created by val-de-mar on 07.03.2021.
-//
-
-#ifndef GAME_GAME_FIELD_H
-#define GAME_GAME_FIELD_H
-
-#endif //GAME_GAME_FIELD_H
+#pragma once
 
 #include <iostream>
 #include <utility>
@@ -188,10 +181,12 @@ public:
 class Aim : public Cursor {
     const Cursor& creator;
     void move(int delta_x, int delta_y) override {
-        if((delta_x + x) >= 0 && (delta_y + y) >= 0 && (delta_x + x) < field_.x_size && (delta_y + y) < field_.y_size) {
-            if (field_[x][y]->located_unit -> allowedToMoveAim(delta_x, delta_y)) {
-                x += delta_x;
-                y += delta_y;
+        int new_x = static_cast<int>(x)+ delta_x;
+        int new_y = static_cast<int>(y) + delta_y;
+        if(new_x >= 0 && new_y >= 0 && new_x < field_.x_size && new_y < field_.y_size) {
+            if (field_[creator.x][creator.y]->located_unit -> allowedToMoveAim(new_x - static_cast<int>(creator.x), new_y - static_cast<int>(creator.y))) {
+                x = new_x;
+                y = new_y;
             }
         }
     }

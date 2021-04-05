@@ -13,6 +13,7 @@
 #include "UnitImages.h"
 #include "CursorImages.h"
 
+
 std::string path_to_image(StructureImages image) {
     switch (image) {
         case GrassImage:

@@ -93,7 +93,7 @@ public:
         return true;
     };
     bool allowedToMoveAim(int delta_x, int delta_y) override {
-        return delta_x <= distance_ && delta_y <= distance_;
+        return std::abs(delta_x) <= distance_ && std::abs(delta_y) <= distance_;
     }
 
     bool get_damage(uint16_t damage) override {
