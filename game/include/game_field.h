@@ -34,8 +34,8 @@ public:
     size_t x_size;
     size_t y_size;
     Field(size_t x_size, size_t y_size);;
-    std::vector<Cell*>& operator [] (size_t x);
-    const std::vector<Cell*>& operator [] (size_t x) const;
+    std::vector<Cell*>& operator[](size_t x);
+    const std::vector<Cell*>& operator[](size_t x) const;
     void print();
 
     bool cellIsFree(int x, int y);

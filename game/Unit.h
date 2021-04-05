@@ -67,7 +67,7 @@ public:
 };
 
 
-class Clubber : public Unit {
+class Clubber: public Unit {
     const static UnitImages image_ = ClubberImage;
     uint16_t hp_ = 35;
     uint16_t damage_ = 15;

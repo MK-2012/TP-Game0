@@ -2,7 +2,10 @@
 #include <utility>
 #include <vector>
 #include <string>
-#include "game_field.h"
+#include "game_field.cpp"
+#include "graphics.cpp"
+#include "Structure.cpp"
+#include "Unit.cpp"
 #include <unistd.h>
 
 class Stream {

@@ -11,7 +11,7 @@ const char* UnitAttachingException::what() const noexcept {
 
 Cell::Cell(Field& field, int x, int y): x(x), y(y), field(field), located_unit(new NonExistentUnit()), located_structure(new Grass()) {};
 
-bool Cell::isAllowedToGoIn() {
+bool Cell::isAllowedToGoIn() const {
 	return !(located_unit -> existence()) && located_structure -> isAllowedToGoIn();
 }
 
@@ -60,9 +60,9 @@ void Cursor::move(int delta_x, int delta_y) {
 		}
 	} else {
 		if (field_.cellIsFree(static_cast<int>(x) + delta_x, static_cast<int>(y)  + delta_y)) {
-			if (field_[x][y] -> located_unit -> allowed_to_move()) {
+			if (field_[x][y]->located_unit->allowed_to_move()) {
 				Cell* next_place = field_[static_cast<int>(x) + delta_x][static_cast<int>(y) + delta_y];
-				std::swap(field_[x][y] -> located_unit, next_place -> located_unit);
+				std::swap(field_[x][y]->located_unit, next_place->located_unit);
 				x += delta_x;
 				y += delta_y;
 			}
@@ -103,7 +103,7 @@ void Cursor::attachUnit() {
 	if (unit_attached) {
 		throw UnitAttachingException("unit already attached");
 	}
-	if (!(field_[x][y] -> located_unit-> existence())){
+	if (!(field_[x][y]->located_unit-> existence())){
 		throw UnitAttachingException("You can't attach non existent unit");
 	} else {
 		unit_attached = true;
@@ -117,3 +117,39 @@ void Cursor::detachUnit() {
 	}
 }
 
+
+Aim::Aim(const Cursor& cursor): Cursor(cursor), creator(cursor) {};
+void Aim::move(int delta_x, int delta_y) {
+	if((delta_x + x) >= 0 && (delta_y + y) >= 0 && (delta_x + x) < field_.x_size && (delta_y + y) < field_.y_size) {
+		if (field_[x][y]->located_unit->allowedToMoveAim(delta_x, delta_y)) {
+			x += delta_x;
+			y += delta_y;
+		}
+	}
+}
+CursorImages Aim::image() {
+	return AimImage;
+}
+void Aim::attack() {
+	if (field_[x][y] -> located_unit != field_[creator.x][creator.y]->located_unit) {
+		if (field_[x][y]->located_unit->get_damage(field_[creator.x][creator.y]->located_unit->damage())) {
+			delete field_[x][y]->located_unit;
+			field_[x][y]->located_unit = new NonExistentUnit;
+		}
+	}
+}
+Aim::~Aim() = default;
+
+
+template<typename UnitType>
+void emplaceUnit(Cell* cell) {
+	if (cell -> isAllowedToGoIn()) {
+		delete cell->located_unit;
+		cell->located_unit = new UnitType();
+	}
+}
+template<typename StructureType>
+void emplaceStructure(Cell* cell) {
+	delete cell -> located_structure;
+	cell -> located_structure = new StructureType();
+}

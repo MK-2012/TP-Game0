@@ -1,14 +1,11 @@
-# Object file
-*.o
-
-# Ada Library Information
-*.ali
-
-*.scf
-*.txt
-
-#Cmake folders
-/cmake
-/cmake-build-debug
-/lib
+# Default ignored files
+/shelf/
+/workspace.xml
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+/game/cmake-build-debug
 .idea
+/game/.idea

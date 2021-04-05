@@ -12,17 +12,17 @@ public:
     virtual ~Structure() = default;
     virtual bool isAllowedToGoIn() = 0;
 protected:
-    explicit Structure() {}
+    explicit Structure();
 };
 
 
-class Landscape : public Structure {
+class Landscape: public Structure {
 public:
-    explicit Landscape() : Structure() {}
+    explicit Landscape();
 
     StructureImages image() override = 0;
     bool isAllowedToGoIn() override = 0;
-    ~Landscape() override = default;
+    ~Landscape() override;
 };
 
 

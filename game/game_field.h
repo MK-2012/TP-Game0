@@ -48,7 +48,7 @@ public:
     Structure* located_structure;
     Cell(Field &field, int x, int y);
     friend void emplaceUnit(Cell* cell);
-    bool isAllowedToGoIn();
+    bool isAllowedToGoIn() const;
 };
 
 
@@ -103,33 +103,14 @@ public:
 
 class Aim : public Cursor {
     const Cursor& creator;
-    void move(int delta_x, int delta_y) override {
-        if((delta_x + x) >= 0 && (delta_y + y) >= 0 && (delta_x + x) < field_.x_size && (delta_y + y) < field_.y_size) {
-            if (field_[x][y]->located_unit -> allowedToMoveAim(delta_x, delta_y)) {
-                x += delta_x;
-                y += delta_y;
-            }
-        }
-    }
-
+    void move(int delta_x, int delta_y) override;
 public:
-    explicit Aim(const Cursor& cursor) : Cursor(cursor), creator(cursor){}
+    explicit Aim(const Cursor& cursor);
 
-    CursorImages image() override {
-        return AimImage;
-    }
+    CursorImages image() override;
 
-    void attack(){
-        if (field_[x][y] -> located_unit != field_[creator.x][creator.y] -> located_unit) {
-            if (field_[x][y]->located_unit->get_damage(field_[creator.x][creator.y] -> located_unit ->damage())) {
-                delete field_[x][y]->located_unit;
-                field_[x][y]->located_unit = new NonExistentUnit;
-            }
-        }
-    }
-    ~Aim(){
-
-    }
+    void attack();
+    ~Aim();
 };
 
 
@@ -137,14 +118,6 @@ public:
 
 
 template<typename UnitType>
-void emplaceUnit(Cell* cell) {
-    if (cell -> isAllowedToGoIn()) {
-        delete cell->located_unit;
-        cell->located_unit = new UnitType();
-    }
-}
+void emplaceUnit(Cell* cell);
 template<typename StructureType>
-void emplaceStructure(Cell* cell) {
-    delete cell -> located_structure;
-    cell -> located_structure = new StructureType();
-}
+void emplaceStructure(Cell* cell);
