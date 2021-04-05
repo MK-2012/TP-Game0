@@ -21,9 +21,8 @@ public:
     }
 };
 
-void aimControl (Unit* unit, FieldPainter<Field>& paint, Stream& input) {
-    Field &field = unit -> place ->field;
-    Aim* aim(new Aim(unit));
+void aimControl (Field& field ,Aim& aim, FieldPainter<Field>& paint, Stream& input) {
+
     char command;
 
     //paint.allField();
@@ -37,25 +36,24 @@ void aimControl (Unit* unit, FieldPainter<Field>& paint, Stream& input) {
                 quit = true;
                 break;
             case 'w':
-                aim->move_up();
+                aim.move_up();
                 break;
             case 'a':
-                aim->move_left();
+                aim.move_left();
                 break;
             case 's':
-                aim->move_down();
+                aim.move_down();
                 break;
             case 'd':
-                aim->move_right();
+                aim.move_right();
                 break;
             case '\n':
                 paint.allField();
                 paint.show();
                 break;
             case 'f':
-                aim -> attack();
+                aim.attack();
                 quit = true;
-                delete aim;
                 break;
         }
         if (quit) {
@@ -71,13 +69,13 @@ void aimControl (Unit* unit, FieldPainter<Field>& paint, Stream& input) {
 
 int main() {
     Stream input;
-    Field field(30,30);
-    emplaceUnit<Clubber_<Cell>>(field[1][1]);
+    Field field(10,10);
+    emplaceUnit<Clubber>(field[1][1]);
     emplaceStructure<River>(field[5][5]);
     emplaceStructure<River>(field[4][5]);
     emplaceStructure<River>(field[3][5]);
     emplaceStructure<River>(field[2][5]);
-    Unit_<Cell>* unit = field[1][1]->located_unit;
+    Cursor cursor(field);
     FieldPainter<Field> paint(field);
     paint.allField();
     //paint.aim(1, 1);
@@ -92,37 +90,52 @@ int main() {
                 quit = true;
                 break;
             case 'w':
-                unit->move_up();
+                cursor.move_up();
                 break;
             case 'a':
-                unit->move_left();
+                cursor.move_left();
                 break;
             case 's':
-                unit->move_down();
+                cursor.move_down();
                 break;
             case 'd':
-                unit->move_right();
+                cursor.move_right();
                 break;
             case 'n':
                 emplaceUnit<Clubber>(field[1][1]);
                 break;
+            case 'e': {
+                if (cursor.unit_attached) {
+                    cursor.detachUnit();
+                } else {
+                    try {
+                        cursor.attachUnit();
+                    } catch (UnitAttachingException error) {
+                        std::cout << error.what();
+                    }
+                }
+                break;
+            }
             case 'f':
-                aimControl(unit, paint, input);
+                if(cursor.unit_attached) {
+                    Aim aim(cursor);
+                    aimControl(field, aim, paint, input);
+                }
                 break;
             case '\n':
                 paint.allField();
                 paint.show();
                 break;
             case 'm':
-                int x, y;
-                std::cin >> x >> y;
-                Unit *n_unit = (field[x][y]->located_unit);
-                if (n_unit->existence()) {
-                    unit = n_unit;
-                    std::cout << "changed";
-                } else {
-                    std::cout << "can't change";
-                }
+//                int x, y;
+//                std::cin >> x >> y;
+//                Unit *n_unit = (field[x][y]->located_unit);
+//                if (n_unit->existence()) {
+//                    unit = n_unit;
+//                    std::cout << "changed";
+//                } else {
+//                    std::cout << "can't change";
+//                }
                 break;
         }
         if (quit) {

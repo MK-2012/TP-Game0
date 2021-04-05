@@ -1,65 +1,59 @@
-//
-// Created by val-de-mar on 08.03.2021.
-//
+#pragma once
 
-#ifndef GAME_STRUCTURE_H
-#define GAME_STRUCTURE_H
 
-#endif //GAME_STRUCTURE_H
+#include "StructureImages.h"
 
-template<typename Cell>
-class Structure_ {
+
+
+
+class Structure {
 public:
-    Cell* place;
-    virtual const std::string& image_placement() = 0;
-    virtual ~Structure_() = default;
+    virtual StructureImages image() = 0;
+    virtual ~Structure() = default;
     virtual bool isAllowedToGoIn() = 0;
 protected:
-    explicit Structure_(Cell* place) : place(place) {}
+    explicit Structure() {}
 };
 
-template<typename Cell>
-class Landscape_ : public Structure_<Cell> {
+
+class Landscape : public Structure {
 public:
-    explicit Landscape_(Cell* place) : Structure_<Cell>(place) {}
-    const std::string& image_placement() override = 0;
+    explicit Landscape() : Structure() {}
+
+    StructureImages image() override = 0;
     bool isAllowedToGoIn() override = 0;
-    ~Landscape_() override = default;
+    ~Landscape() override = default;
 };
 
 
-template<typename Cell>
-class Grass_ : public Landscape_<Cell> {
-    const static std::string image_placement_;
+
+class Grass : public Landscape {
+    const static StructureImages image_placement_ = GrassImage;
 public:
-    explicit Grass_(Cell* place) : Landscape_<Cell>(place) {}
-    const std::string& image_placement() override {
+    explicit Grass() : Landscape() {}
+    StructureImages image() override {
         return image_placement_;
     }
     bool isAllowedToGoIn() override {
         return true;
     }
-    ~Grass_() override = default;
+    ~Grass() override = default;
 };
 
-template<typename Cell>
-const std::string Grass_<Cell>::image_placement_ = "images/structures/Grass1.png";
 
 
-template<typename Cell>
-class River_ : public Landscape_<Cell> {
-    const static std::string image_placement_;
+
+
+class River : public Landscape {
+    const static StructureImages image_placement_ = RiverImage;
 public:
-    explicit River_(Cell* place) : Landscape_<Cell>(place) {}
-    const std::string& image_placement() override {
+    explicit River() : Landscape() {}
+    StructureImages image() override {
         return image_placement_;
     }
     bool isAllowedToGoIn() override {
         return false;
     }
-    ~River_() override = default;
+    ~River() override = default;
 };
-
-template<typename Cell>
-const std::string River_<Cell>::image_placement_ = "images/structures/River5.png";
 
