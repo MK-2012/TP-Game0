@@ -9,26 +9,6 @@
 
 
 #include <cairo/cairo.h>
-#include "StructureImages.h"
-#include "UnitImages.h"
-#include "CursorImages.h"
-
-std::string path_to_image(StructureImages image) {
-    switch (image) {
-        case GrassImage:
-            return std::string(IMAGE_DIR) + "structures/Grass1.png";
-        case RiverImage:
-            return std::string(IMAGE_DIR) + "structures/River5.png";
-    }
-}
-std::string path_to_image(UnitImages image) {
-    switch (image) {
-        case NonExistentUnitImage:
-            return std::string(IMAGE_DIR) + "units/non_existent.png";
-        case ClubberImage:
-            return std::string(IMAGE_DIR) + "units/clubber.png";
-    }
-}
 
 namespace rmPointer {
     template<typename T>
@@ -57,28 +37,28 @@ public:
         cairo_t *cr;
         cr = cairo_create(surface);
 
-        cairo_pattern_t *pattern;
-        pattern = cairo_pattern_create_rgba(0, 0, 0, 1);
-        cairo_rectangle(cr, (cell->x) * 64, (cell->y) * 64, 64, 64);
+        cairo_pattern_t* pattern;
+        pattern = cairo_pattern_create_rgba(0,0,0, 1);
+        cairo_rectangle(cr, (cell -> x) * 64, (cell -> y) * 64, 64, 64);
         cairo_set_source(cr, pattern);
         cairo_fill(cr);
         cairo_pattern_destroy(pattern);
 
         cairo_surface_t *structure_image;
-        structure_image = cairo_image_surface_create_from_png(path_to_image(cell->located_structure->image()).c_str());
-        cairo_rectangle(cr, (cell->x) * 64 + 2, (cell->y) * 64 + 2, 60, 60);
-        cairo_set_source_surface(cr, structure_image, (cell->x) * 64, (cell->y) * 64);
+        structure_image = cairo_image_surface_create_from_png(cell -> located_structure -> image_placement().c_str());
+        cairo_rectangle(cr, (cell -> x) * 64 + 2, (cell -> y) * 64 + 2, 60, 60);
+        cairo_set_source_surface(cr, structure_image, (cell -> x) * 64, (cell -> y) * 64);
         cairo_fill(cr);
         cairo_surface_destroy(structure_image);
 
-
-        cairo_surface_t *unit_image;
-        unit_image = cairo_image_surface_create_from_png(path_to_image(cell->located_unit->image()).c_str());
-        cairo_rectangle(cr, (cell->x) * 64 + 6, (cell->y) * 64 + 6, 52, 52);
-        cairo_set_source_surface(cr, unit_image, (cell->x) * 64, (cell->y) * 64);
-        cairo_fill(cr);
-        cairo_surface_destroy(unit_image);
-
+        if(cell->located_unit->existence()) {
+            cairo_surface_t *unit_image;
+            unit_image = cairo_image_surface_create_from_png(cell->located_unit->image_placement().c_str());
+            cairo_rectangle(cr, (cell->x) * 64 + 6, (cell->y) * 64 + 6, 52, 52);
+            cairo_set_source_surface(cr, unit_image, (cell->x) * 64, (cell->y) * 64);
+            cairo_fill(cr);
+            cairo_surface_destroy(unit_image);
+        }
         cairo_destroy(cr);
     }
     void show() {
@@ -90,25 +70,15 @@ public:
                 (*this)(field[i][j]);
             }
         }
-        for (auto cursor: field.cursors) {
-            aim(cursor -> x, cursor -> y, cursor -> image());
+        if (field.aim != nullptr) {
+            aim(field.aim->x, field.aim->y);
         }
     }
-    void aim(size_t x, size_t y, CursorImages image) {
+    void aim(size_t x, size_t y) {
         cairo_t *cr;
         cr = cairo_create(surface);
         cairo_set_line_width(cr,2);
-        switch (image) {
-            case CursorWithoutUnitImage:
-                cairo_set_source_rgb(cr, 0, 0, 1);
-                break;
-            case CursorWithUnitImage:
-                cairo_set_source_rgb(cr, 0, 1, 1);
-                break;
-            case AimImage:
-                cairo_set_source_rgb(cr, 1, 0, 0);
-                break;
-        }
+        cairo_set_source_rgb(cr, 1, 0, 0);
 
         cairo_move_to(cr, x * 64 + 0, y * 64 + 1);
         cairo_line_to(cr, x * 64 + 64, y * 64 + 1);
