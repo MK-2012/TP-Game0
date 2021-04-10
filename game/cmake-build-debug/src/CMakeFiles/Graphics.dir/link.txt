@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -g -shared -Wl,-soname,libGraphics.so -o libGraphics.so CMakeFiles/Graphics.dir/graphics.cpp.o  -Wl,-rpath,/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src /usr/lib/x86_64-linux-gnu/libcairo.so libGameField.so libUnit.so libStructure.so 

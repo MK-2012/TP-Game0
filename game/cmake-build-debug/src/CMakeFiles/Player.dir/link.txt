@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -g -shared -Wl,-soname,libPlayer.so -o libPlayer.so CMakeFiles/Player.dir/Player.cpp.o  -Wl,-rpath,/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src libCursor.so libTreasury.so libGameField.so libUnit.so libStructure.so 
