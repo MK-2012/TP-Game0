@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/game.dir/main.cpp.o -o game  -Wl,-rpath,/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src: src/libGraphics.so src/libGameField.so src/libStructure.so src/libUnit.so /usr/lib/x86_64-linux-gnu/libcairo.so 

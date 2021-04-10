@@ -3,7 +3,23 @@
 #include <vector>
 #include <string>
 #include "game_field.h"
+#include "graphics.h"
+#include "Structure.h"
+#include "Unit.h"
 #include <unistd.h>
+
+template<typename UnitType>
+void emplaceUnit(Cell* cell) {
+    if (cell -> isAllowedToGoIn()) {
+        delete cell->located_unit;
+        cell->located_unit = new UnitType();
+    }
+}
+template<typename StructureType>
+void emplaceStructure(Cell* cell) {
+    delete cell -> located_structure;
+    cell -> located_structure = new StructureType();
+}
 
 class Stream {
 public:
@@ -21,7 +37,7 @@ public:
     }
 };
 
-void aimControl (Field& field ,Aim& aim, FieldPainter<Field>& paint, Stream& input) {
+void aimControl (Field& field ,Aim& aim, FieldPainter& paint, Stream& input) {
 
     char command;
 
@@ -76,7 +92,7 @@ int main() {
     emplaceStructure<River>(field[3][5]);
     emplaceStructure<River>(field[2][5]);
     Cursor cursor(field);
-    FieldPainter<Field> paint(field);
+    FieldPainter paint(field);
     paint.allField();
     //paint.aim(1, 1);
     paint.show();

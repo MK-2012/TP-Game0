@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g -shared -Wl,-soname,libTreasury.so -o libTreasury.so CMakeFiles/Treasury.dir/Treasury.cpp.o  -Wl,-rpath,/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src libUnit.so libStructure.so 

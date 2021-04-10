@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Structure.h
+StructureImages.h
+../include/StructureImages.h
+
+../include/StructureImages.h
+
+/home/val-de-mar/Desktop/git_folders/tem/src/Structure.cpp
+Structure.h
+/home/val-de-mar/Desktop/git_folders/tem/src/Structure.h
+

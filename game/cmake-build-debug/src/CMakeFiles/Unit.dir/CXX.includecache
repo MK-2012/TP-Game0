@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Unit.h
+UnitImages.h
+../include/UnitImages.h
+iostream
+-
+
+../include/UnitImages.h
+
+/home/val-de-mar/Desktop/git_folders/tem/src/Unit.cpp
+Unit.h
+/home/val-de-mar/Desktop/git_folders/tem/src/Unit.h
+

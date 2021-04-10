@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="game"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\src\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="game">
+				<Option output="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/game" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DIMAGE_DIR=&quot;/home/val-de-mar/Desktop/git_folders/tem/images/&quot;"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/home/val-de-mar/Desktop/git_folders/tem/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 game"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="game/fast">
+				<Option output="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/game" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DIMAGE_DIR=&quot;/home/val-de-mar/Desktop/git_folders/tem/images/&quot;"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/home/val-de-mar/Desktop/git_folders/tem/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 game/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Structure">
+				<Option output="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/libStructure.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/home/val-de-mar/Desktop/git_folders/tem/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 Structure"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Structure/fast">
+				<Option output="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/libStructure.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/home/val-de-mar/Desktop/git_folders/tem/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 Structure/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Unit">
+				<Option output="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/libUnit.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/home/val-de-mar/Desktop/git_folders/tem/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 Unit"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Unit/fast">
+				<Option output="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/libUnit.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/home/val-de-mar/Desktop/git_folders/tem/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 Unit/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="GameField">
+				<Option output="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/libGameField.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/home/val-de-mar/Desktop/git_folders/tem/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 GameField"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="GameField/fast">
+				<Option output="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/libGameField.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/home/val-de-mar/Desktop/git_folders/tem/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 GameField/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Graphics">
+				<Option output="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/libGraphics.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DIMAGE_DIR=&quot;/home/val-de-mar/Desktop/git_folders/tem/images/&quot;"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/home/val-de-mar/Desktop/git_folders/tem/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 Graphics"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Graphics/fast">
+				<Option output="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/libGraphics.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DIMAGE_DIR=&quot;/home/val-de-mar/Desktop/git_folders/tem/images/&quot;"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/home/val-de-mar/Desktop/git_folders/tem/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 Graphics/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/val-de-mar/Desktop/git_folders/tem/main.cpp">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="/home/val-de-mar/Desktop/git_folders/tem/src/Structure.cpp">
+			<Option target="Structure"/>
+		</Unit>
+		<Unit filename="/home/val-de-mar/Desktop/git_folders/tem/src/Unit.cpp">
+			<Option target="Unit"/>
+		</Unit>
+		<Unit filename="/home/val-de-mar/Desktop/git_folders/tem/src/game_field.cpp">
+			<Option target="GameField"/>
+		</Unit>
+		<Unit filename="/home/val-de-mar/Desktop/git_folders/tem/src/graphics.cpp">
+			<Option target="Graphics"/>
+		</Unit>
+		<Unit filename="/home/val-de-mar/Desktop/git_folders/tem/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/val-de-mar/Desktop/git_folders/tem/cmake/FindCairo.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/val-de-mar/Desktop/git_folders/tem/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

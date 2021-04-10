@@ -1,0 +1,17 @@
+/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/CMakeFiles/install/strip.dir
+/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/CMakeFiles/install/local.dir
+/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/CMakeFiles/game.dir
+/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/CMakeFiles/install.dir
+/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/CMakeFiles/list_install_components.dir
+/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/CMakeFiles/install.dir
+/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/CMakeFiles/list_install_components.dir
+/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
+/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/CMakeFiles/edit_cache.dir
+/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/CMakeFiles/Structure.dir
+/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/CMakeFiles/Unit.dir
+/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/CMakeFiles/GameField.dir
+/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/CMakeFiles/install/strip.dir
+/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/CMakeFiles/install/local.dir
+/home/val-de-mar/Desktop/git_folders/tem/cmake-build-debug/src/CMakeFiles/Graphics.dir

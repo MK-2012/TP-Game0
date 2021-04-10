@@ -1,4 +1,4 @@
-#include "include/graphics.h"
+#include "graphics.h"
 
 template<typename Cell>
 class Unit_ {
@@ -43,7 +43,7 @@ public:
     bool allowed_to_move() override;;
     bool allowedToMoveAim(size_t x, size_t y) override;
 
-    bool get_damage(uint16_t damage) override;;
+    bool get_damage(uint16_t damage) override;
     ~NonExistentUnit_() override = default;
 };
 
