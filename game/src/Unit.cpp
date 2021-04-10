@@ -5,9 +5,9 @@ bool Unit::existence() {
     return true;
 }
 
-Unit::Unit() = default;
+Unit::Unit(PlayerEnum player) : player_(player) {}
 
-Unit::~Unit() = default;
+const std::string NonExistentUnit::name_ = "nothing";
 
 bool NonExistentUnit::existence() {
     return false;
@@ -17,7 +17,7 @@ uint16_t NonExistentUnit::hp() {
     return 0;
 }
 
-uint16_t NonExistentUnit::damage() {
+uint16_t NonExistentUnit::damage(PlayerEnum player) {
     return 0;
 }
 
@@ -41,15 +41,24 @@ bool NonExistentUnit::get_damage(uint16_t damage) {
     return false;
 }
 
-NonExistentUnit::~NonExistentUnit() = default;
+NonExistentUnit::NonExistentUnit(PlayerEnum player) : Unit(player) {}
 
-NonExistentUnit::NonExistentUnit() = default;
+int NonExistentUnit::cost() {
+    return 0;
+}
+
+std::string NonExistentUnit::name() {
+    return name_;
+}
 
 uint16_t Clubber::hp() {
     return hp_;
 }
 
-uint16_t Clubber::damage() {
+uint16_t Clubber::damage(PlayerEnum player) {
+    if(player == player_) {
+        return 0;
+    }
     return damage_;
 }
 
@@ -77,3 +86,15 @@ bool Clubber::get_damage(uint16_t damage) {
         return false;
     }
 }
+
+Clubber::Clubber(PlayerEnum player) : Unit(player) {}
+
+int Clubber::cost() {
+    return cost_;
+}
+const std::string Clubber::name_ = "Clubber";
+
+std::string Clubber::name() {
+    return name_;
+}
+

@@ -1,3 +1,4 @@
+#pragma once
 
 
 #include <cairo/cairo.h>
@@ -5,6 +6,8 @@
 #include "UnitImages.h"
 #include "CursorImages.h"
 #include "game_field.h"
+#include "Cursor.h"
+#include "Player.h"
 #include <string>
 
 std::string path_to_image(StructureImages image);
@@ -25,16 +28,20 @@ namespace rmPointer {
 
 
 
-class FieldPainter {
+class PlayerPainter {
     const Field& field;
+    const Player& player_;
     cairo_surface_t *surface;
     const static uint64_t cell_size;
     const static uint64_t border_width;
+    static std::vector<PlayerPainter*> painters;
+    static std::vector<bool> created;
+    PlayerPainter(const Player& player);
 public:
-    FieldPainter(const Field& field_to_paint);
     void operator () (const Cell* cell);
     void show();
     void allField();
-    void aim(size_t x, size_t y, CursorImages image);
+    void cursorPaint(size_t x, size_t y, CursorImages image);
+    static PlayerPainter& get(PlayerEnum player, Field& field);
 //  void clear_aim(size_t x, size_t y); {
 };
