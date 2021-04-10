@@ -4,7 +4,7 @@ project(game)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp include/PlayerEnum.h)
+set(SOURCE_FILES main.cpp)
 
 add_subdirectory(src)
 find_package(Cairo)

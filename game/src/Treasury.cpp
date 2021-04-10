@@ -23,3 +23,19 @@ int Treasury::requiredMemes() const {
 int Treasury::memesLimit() const {
     return memes_limit_;
 }
+
+Treasury::Treasury(PlayerEnum player) {
+    UnitTreasury::set(player, &units);
+}
+
+void Treasury::insertStructure(Structure *structure) {
+    structures.structures.insert(structure);
+}
+
+void Treasury::calcIncome() {
+    for (auto i: structures.structures) {
+        gold += i -> income();
+    }
+}
+
+

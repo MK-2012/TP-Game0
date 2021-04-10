@@ -1,5 +1,7 @@
 #pragma once
 #include "game_field.h"
+#include "UnitTreasury.h"
+#include "StructureTreasury.h"
 #include "CursorImages.h"
 
 

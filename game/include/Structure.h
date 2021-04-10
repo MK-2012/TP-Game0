@@ -2,26 +2,32 @@
 
 
 #include "StructureImages.h"
-
+#include "PlayerEnum.h"
+#include <string>
 
 
 
 class Structure {
 public:
+    PlayerEnum player_;
+
     virtual StructureImages image() = 0;
     virtual ~Structure() = default;
     virtual bool isAllowedToGoIn() = 0;
+    virtual std::string name();
+    virtual int income();
 protected:
-    Structure();
+    Structure(PlayerEnum);
 };
 
 
 class Landscape: public Structure {
 public:
-    Landscape();
+    Landscape(PlayerEnum);
 
     StructureImages image() override = 0;
     bool isAllowedToGoIn() override = 0;
+    std::string name() override;
     ~Landscape() override;
 };
 
@@ -30,9 +36,10 @@ public:
 class Grass : public Landscape {
     const static StructureImages image_placement_;
 public:
-    Grass();
+    Grass(PlayerEnum);
     StructureImages image() override;
     bool isAllowedToGoIn() override;
+    std::string name() override;
     ~Grass() override;
 };
 
@@ -43,9 +50,20 @@ public:
 class River : public Landscape {
     const static StructureImages image_placement_;
 public:
-    River();
+    River(PlayerEnum);
     StructureImages image() override;
     bool isAllowedToGoIn() override;
+    std::string name() override;
     ~River() override;
 };
 
+class MemeFabric : public Grass {
+    const static StructureImages image_placement_;
+public:
+    MemeFabric(PlayerEnum);
+    StructureImages image() override;
+    bool isAllowedToGoIn() override;
+    std::string name() override;
+    int income() override;
+    ~MemeFabric() override;
+};

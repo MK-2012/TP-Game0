@@ -9,6 +9,9 @@ std::string path_to_image(StructureImages image) {
 		case RiverImage: {
 			return std::string(IMAGE_DIR) + "structures/River5.png";
 		}
+		case MemeFabricImage: {
+            return std::string(IMAGE_DIR) + "structures/memefabric.png";
+		}
 	}
 }
 std::string path_to_image(UnitImages image) {
@@ -19,6 +22,9 @@ std::string path_to_image(UnitImages image) {
 		case ClubberImage: {
 			return std::string(IMAGE_DIR) + "units/clubber.png";
 		}
+        case WorkerImage: {
+            return std::string(IMAGE_DIR) + "units/worker.png";
+        }
 	}
 }
 

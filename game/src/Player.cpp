@@ -1,6 +1,6 @@
 #include "Player.h"
 
-Player::Player(Field &field, PlayerEnum number): control(field, number), number(number) {}
+Player::Player(Field &field, PlayerEnum number): control(field, number), number(number), treasury(number) {}
 
 Player &Player::get(PlayerEnum player, Field &field) {
     // std::cout << "\n " << playerNum(player) <<" player " << playerNum(player);

@@ -18,8 +18,8 @@ void emplaceUnit(Player &player) {
             Cell *cell = player.control.get_cell();
             if (cell->isAllowedToGoIn()) {
                 delete cell->located_unit;
-                player.treasury.insertUnit(cell->located_unit);
                 cell->located_unit = new UnitType(player.number);
+                player.treasury.insertUnit(cell->located_unit);
             }
         }
     } else {
@@ -31,9 +31,21 @@ void emplaceUnit(Player &player) {
 
 
 template<typename StructureType>
-void emplaceStructure(Cell *cell, PlayerEnum player) {
+void emplaceStructure(Player &player) {
+    Cell *cell = player.control.get_cell();
+    if (cell->located_unit -> canConstruct()) {
+        if (cell->located_structure->name() == "Grass") {
+            delete cell->located_structure;
+            cell->located_structure = new StructureType(player.number);
+            player.treasury.insertStructure(cell -> located_structure);
+        }
+    }
+}
+
+template<typename StructureType>
+void demiurgeEmplaceStructure(Cell *cell) {
     delete cell->located_structure;
-    cell->located_structure = new StructureType();
+    cell->located_structure = new StructureType(Nobody);
 }
 
 class Stream {
@@ -117,10 +129,10 @@ int main() {
     Cursor *cursor = &((Player::get(Player1, field)).control);
     Player *player = &(Player::get(Player1, field));
     PlayerPainter *paint = &PlayerPainter::get(Player1, field);
-    emplaceStructure<River>(field[5][5], Nobody);
-    emplaceStructure<River>(field[4][5], Nobody);
-    emplaceStructure<River>(field[3][5], Nobody);
-    emplaceStructure<River>(field[2][5], Nobody);
+    demiurgeEmplaceStructure<River>(field[5][5]);
+    demiurgeEmplaceStructure<River>(field[4][5]);
+    demiurgeEmplaceStructure<River>(field[3][5]);
+    demiurgeEmplaceStructure<River>(field[2][5]);
 
     paint -> allField();
     //paint.cursorPaint(1, 1);
@@ -147,9 +159,17 @@ int main() {
             case 'd':
                 cursor -> move_right();
                 break;
-            case 'n':
-                emplaceUnit<Clubber>(*player);
+            case 'n': {
+                char unit;
+                input >> unit;
+                switch (unit) {
+                    case 'c':
+                        emplaceUnit<Clubber>(*player);
+                    case 'w':
+                        emplaceUnit<Worker>(*player);
+                }
                 break;
+            }
             case 'e': {
                 if (cursor -> unit_attached) {
                     cursor -> detachUnit();
@@ -178,7 +198,6 @@ int main() {
                 input >> num;
                 if(num < PlayersNum && num > 0) {
                     std::cout << "\n" << num << "\n";
-                    auto aaaaa = playerNum(num);
                     player = &Player::get(playerNum(num), field);
                     cursor = &(player -> control);
                     paint = &PlayerPainter::get(playerNum(num), field);
@@ -186,6 +205,13 @@ int main() {
                     std::cout << "\n you have only " << PlayersNum << " players";
                 }
                 break;
+            case 'l':
+                for (auto i: player->treasury.units.units) {
+                    std::cout << " " << i->name() << " ";
+                }
+            case 'c':
+                emplaceStructure<MemeFabric>(*player);
+                std::cout << " constr";
         }
         if (quit) {
             break;

@@ -1,5 +1,5 @@
 #include "Cursor.h"
-
+#include "type_traits"
 
 
 void Cursor::move(int delta_x, int delta_y) {
@@ -68,6 +68,8 @@ Cell *Cursor::get_cell() {
 }
 
 
+
+
 Aim::Aim(const Cursor& cursor): Cursor(cursor), creator(cursor) {};
 void Aim::move(int delta_x, int delta_y) {
     int x_new = static_cast<int>(x) + delta_x;
@@ -85,6 +87,7 @@ CursorImages Aim::image() const {
 void Aim::attack() {
     if (field_[x][y] -> located_unit != field_[creator.x][creator.y]->located_unit) {
         if (field_[x][y]->located_unit->get_damage(field_[creator.x][creator.y]->located_unit->damage(field_[x][y]->located_unit->player_))) {
+            UnitTreasury::erase(field_[x][y]->located_unit->player_, field_[x][y]->located_unit);
             delete field_[x][y]->located_unit;
             field_[x][y]->located_unit = new NonExistentUnit(Nobody);
         }

@@ -1,13 +1,25 @@
 #include "Structure.h"
 
-Structure::Structure() = default;
+Structure::Structure(PlayerEnum player): player_(player){}
+
+std::string Structure::name() {
+    return "Structure";
+}
+
+int Structure::income() {
+    return 0;
+}
 
 
-Landscape::Landscape() = default;
+Landscape::Landscape(PlayerEnum player): Structure(player){}
+
+std::string Landscape::name() {
+    return "Landscape";
+}
 
 Landscape::~Landscape() = default;
 
-Grass::Grass() = default;
+Grass::Grass(PlayerEnum player): Landscape(player) {}
 const StructureImages Grass::image_placement_ = GrassImage;
 
 StructureImages Grass::image() {
@@ -16,6 +28,10 @@ StructureImages Grass::image() {
 
 bool Grass::isAllowedToGoIn() {
     return true;
+}
+
+std::string Grass::name() {
+    return "Grass";
 }
 
 Grass::~Grass() = default;
@@ -32,4 +48,29 @@ bool River::isAllowedToGoIn() {
 
 River::~River() = default;
 
-River::River() = default;
+River::River(PlayerEnum player): Landscape(player){}
+
+std::string River::name() {
+    return "River";
+}
+
+MemeFabric::MemeFabric(PlayerEnum player): Grass(player) {}
+const StructureImages MemeFabric::image_placement_ = MemeFabricImage;
+
+StructureImages MemeFabric::image() {
+    return image_placement_;
+}
+
+bool MemeFabric::isAllowedToGoIn() {
+    return true;
+}
+
+std::string MemeFabric::name() {
+    return "MemeFabric";
+}
+
+int MemeFabric::income() {
+    return 5;
+}
+
+MemeFabric::~MemeFabric() = default;

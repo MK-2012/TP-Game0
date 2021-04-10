@@ -9,7 +9,7 @@ const char* UnitAttachingException::what() const noexcept {
 }
 
 
-Cell::Cell(Field& field, int x, int y): x(x), y(y), field(field), located_unit(new NonExistentUnit(Nobody)), located_structure(new Grass()) {};
+Cell::Cell(Field& field, int x, int y): x(x), y(y), field(field), located_unit(new NonExistentUnit(Nobody)), located_structure(new Grass(Nobody)) {};
 
 bool Cell::isAllowedToGoIn() const {
 	return !(located_unit -> existence()) && located_structure -> isAllowedToGoIn();

@@ -2,5 +2,6 @@
 
 enum UnitImages {
     NonExistentUnitImage,
-    ClubberImage
+    ClubberImage,
+    WorkerImage
 };

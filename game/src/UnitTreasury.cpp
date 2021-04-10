@@ -16,4 +16,9 @@ UnitTreasury &UnitTreasury::get(PlayerEnum player) {
     return *(unit_treasures[playerNum(player)]);
 }
 
+void UnitTreasury::erase(PlayerEnum player, Unit *unit) {
+    UnitTreasury& tr = UnitTreasury::get(player);
+    tr.units.erase(unit);
+}
+
 
