@@ -81,8 +81,6 @@ void aimControl(Player &player, PlayerPainter &paint, Stream &input) {
     Aim &aim = *player.aim;
 
 
-    //paint.allField();
-    //paint.show();
     while (true) {
         bool quit = false;
         input >> command;
@@ -126,8 +124,6 @@ void playTurn(Player* player, Stream& input, PlayerPainter* paint ,Field& field)
     while (true) {
         bool quit = false;
         input >> command;
-//        std::cout << "cursor " << cursor->x << " " << cursor->y << "\n";
-//        std::cout << "player " << player->control.x <<  " " << player->control.y << "\n";
         switch (command) {
             case 'q':
                 throw 0;
@@ -244,12 +240,9 @@ int main() {
     }
 
     paint -> allField();
-    //paint.cursorPaint(1, 1);
     paint -> show();
     char command;
 
-    //paint.clear_aim(1, 1);
     paint->show();
     return 0;
-
 }

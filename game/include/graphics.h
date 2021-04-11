@@ -43,5 +43,4 @@ public:
     void allField();
     void cursorPaint(size_t x, size_t y, CursorImages image);
     static PlayerPainter& get(PlayerEnum player, Field& field);
-//  void clear_aim(size_t x, size_t y); {
 };

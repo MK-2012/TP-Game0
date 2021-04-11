@@ -123,7 +123,6 @@ void PlayerPainter::cursorPaint(size_t x, size_t y, CursorImages image) {
 
 PlayerPainter &PlayerPainter::get(PlayerEnum player, Field& field) {
     int num = playerNum(player);
-    // std::cout << "\n" << num << "\n";
     if(created[num]) {
         return *painters[num];
     } else {
@@ -132,25 +131,3 @@ PlayerPainter &PlayerPainter::get(PlayerEnum player, Field& field) {
         return *painters[num];
     }
 }
-//	  template<typename Field>
-//	  void PlayerPainter<Field>::cursorPaint(size_t x, size_t y, CursorImages image) {
-//		  cairo_t *cr;
-//        cr = cairo_create(surface);
-//        cairo_set_line_width(cr,1);
-//        cairo_set_source_rgb(cr, 0, 0, 0);
-//
-//        cairo_move_to(cr, x * 20 + 0.5, y * 20 + 0.5);
-//        cairo_line_to(cr, x * 20 + 19.5, y * 20 + 0.5);
-//
-//        cairo_move_to(cr, x * 20 + 19.5, y * 20 + 0.5);
-//        cairo_line_to(cr, x * 20 + 19.5, y * 20 + 19.5);
-//
-//        cairo_move_to(cr, x * 20 + 19.5, y * 20 + 19.5);
-//        cairo_line_to(cr, x * 20 + 0.5, y * 20 + 19.5);
-//
-//        cairo_move_to(cr, x * 20 + 0.5, y * 20 + 19.5);
-//        cairo_line_to(cr, x * 20 + 0.5, y * 20 + 0.5);
-//
-//        cairo_stroke(cr);
-//        cairo_destroy(cr);
-//    }
