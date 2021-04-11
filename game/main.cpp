@@ -116,27 +116,12 @@ void aimControl(Player &player, PlayerPainter &paint, Stream &input) {
             player.aim = nullptr;
             break;
         }
-
-
     }
 
 }
 
-
-int main() {
-    Stream input;
-    Field field(10, 10);
-    Cursor *cursor = &((Player::get(Player1, field)).control);
-    Player *player = &(Player::get(Player1, field));
-    PlayerPainter *paint = &PlayerPainter::get(Player1, field);
-    demiurgeEmplaceStructure<River>(field[5][5]);
-    demiurgeEmplaceStructure<River>(field[4][5]);
-    demiurgeEmplaceStructure<River>(field[3][5]);
-    demiurgeEmplaceStructure<River>(field[2][5]);
-
-    paint -> allField();
-    //paint.cursorPaint(1, 1);
-    paint -> show();
+void playTurn(Player* player, Stream& input, PlayerPainter* paint ,Field& field) {
+    Cursor* cursor = &player -> control;
     char command;
     while (true) {
         bool quit = false;
@@ -145,8 +130,7 @@ int main() {
 //        std::cout << "player " << player->control.x <<  " " << player->control.y << "\n";
         switch (command) {
             case 'q':
-                quit = true;
-                break;
+                throw 0;
             case 'w':
                 cursor -> move_up();
                 break;
@@ -165,8 +149,19 @@ int main() {
                 switch (unit) {
                     case 'c':
                         emplaceUnit<Clubber>(*player);
+                        break;
                     case 'w':
                         emplaceUnit<Worker>(*player);
+                        break;
+                    case 'a':
+                        emplaceUnit<Archer>(*player);
+                        break;
+                    case 'v':
+                        emplaceUnit<Cavalery>(*player);
+                        break;
+                    case 'h':
+                        emplaceUnit<HorseArcher>(*player);
+                        break;
                 }
                 break;
             }
@@ -209,14 +204,50 @@ int main() {
                 for (auto i: player->treasury.units.units) {
                     std::cout << " " << i->name() << " ";
                 }
+                break;
             case 'c':
                 emplaceStructure<MemeFabric>(*player);
                 std::cout << " constr";
+                break;
+            case 'g':
+                quit = true;
+                break;
         }
         if (quit) {
             break;
         }
     }
+}
+
+
+int main() {
+    Stream input;
+    Field field(10, 10);
+    Cursor *cursor = &((Player::get(Player1, field)).control);
+    Player *player = &(Player::get(Player1, field));
+    PlayerPainter *paint = &PlayerPainter::get(Player1, field);
+    demiurgeEmplaceStructure<River>(field[5][5]);
+    demiurgeEmplaceStructure<River>(field[4][5]);
+    demiurgeEmplaceStructure<River>(field[3][5]);
+    demiurgeEmplaceStructure<River>(field[2][5]);
+    int player_num = 1;
+    try {
+        while (true) {
+            playTurn(player, input, paint, field);
+            player_num = 3 - player_num;
+            player = &(Player::get(playerNum(player_num), field));
+            cursor = &(player -> control);
+            paint = &PlayerPainter::get(playerNum(player_num), field);
+        }
+    } catch (int) {
+
+    }
+
+    paint -> allField();
+    //paint.cursorPaint(1, 1);
+    paint -> show();
+    char command;
+
     //paint.clear_aim(1, 1);
     paint->show();
     return 0;
