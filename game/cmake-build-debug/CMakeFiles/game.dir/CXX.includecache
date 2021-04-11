@@ -13,6 +13,16 @@ iostream
 -
 PlayerEnum.h
 ../include/PlayerEnum.h
+BasicUnits.h
+../include/BasicUnits.h
+
+../include/BasicUnits.h
+UnitImages.h
+../include/UnitImages.h
+iostream
+-
+PlayerEnum.h
+../include/PlayerEnum.h
 
 ../include/Catapult.h
 UnitImages.h
@@ -21,6 +31,8 @@ iostream
 -
 PlayerEnum.h
 ../include/PlayerEnum.h
+BasicUnits.h
+../include/BasicUnits.h
 
 ../include/Cavalery.h
 UnitImages.h
@@ -29,6 +41,8 @@ iostream
 -
 PlayerEnum.h
 ../include/PlayerEnum.h
+BasicUnits.h
+../include/BasicUnits.h
 
 ../include/Cursor.h
 game_field.h
@@ -49,6 +63,8 @@ iostream
 -
 PlayerEnum.h
 ../include/PlayerEnum.h
+BasicUnits.h
+../include/BasicUnits.h
 
 ../include/Player.h
 Cursor.h
@@ -93,12 +109,16 @@ StructureTreasury.h
 ../include/StructureTreasury.h
 
 ../include/Unit.h
-UnitImages.h
-../include/UnitImages.h
-iostream
--
-PlayerEnum.h
-../include/PlayerEnum.h
+BasicUnits.h
+../include/BasicUnits.h
+Archer.h
+../include/Archer.h
+Catapult.h
+../include/Catapult.h
+HorseArcher.h
+../include/HorseArcher.h
+Cavalery.h
+../include/Cavalery.h
 
 ../include/UnitImages.h
 
@@ -161,14 +181,6 @@ Structure.h
 /home/mikhail_2012/TP-Game/game/Structure.h
 Unit.h
 /home/mikhail_2012/TP-Game/game/Unit.h
-Archer.h
-/home/mikhail_2012/TP-Game/game/Archer.h
-Cavalery.h
-/home/mikhail_2012/TP-Game/game/Cavalery.h
-HorseArcher.h
-/home/mikhail_2012/TP-Game/game/HorseArcher.h
-Catapult.h
-/home/mikhail_2012/TP-Game/game/Catapult.h
 Cursor.h
 /home/mikhail_2012/TP-Game/game/Cursor.h
 unistd.h

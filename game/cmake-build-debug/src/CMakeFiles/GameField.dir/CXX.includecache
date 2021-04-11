@@ -6,6 +6,54 @@
 
 #IncludeRegexTransform: 
 
+../include/Archer.h
+UnitImages.h
+../include/UnitImages.h
+iostream
+-
+PlayerEnum.h
+../include/PlayerEnum.h
+BasicUnits.h
+../include/BasicUnits.h
+
+../include/BasicUnits.h
+UnitImages.h
+../include/UnitImages.h
+iostream
+-
+PlayerEnum.h
+../include/PlayerEnum.h
+
+../include/Catapult.h
+UnitImages.h
+../include/UnitImages.h
+iostream
+-
+PlayerEnum.h
+../include/PlayerEnum.h
+BasicUnits.h
+../include/BasicUnits.h
+
+../include/Cavalery.h
+UnitImages.h
+../include/UnitImages.h
+iostream
+-
+PlayerEnum.h
+../include/PlayerEnum.h
+BasicUnits.h
+../include/BasicUnits.h
+
+../include/HorseArcher.h
+UnitImages.h
+../include/UnitImages.h
+iostream
+-
+PlayerEnum.h
+../include/PlayerEnum.h
+BasicUnits.h
+../include/BasicUnits.h
+
 ../include/PlayerEnum.h
 
 ../include/Structure.h
@@ -19,12 +67,16 @@ string
 ../include/StructureImages.h
 
 ../include/Unit.h
-UnitImages.h
-../include/UnitImages.h
-iostream
--
-PlayerEnum.h
-../include/PlayerEnum.h
+BasicUnits.h
+../include/BasicUnits.h
+Archer.h
+../include/Archer.h
+Catapult.h
+../include/Catapult.h
+HorseArcher.h
+../include/HorseArcher.h
+Cavalery.h
+../include/Cavalery.h
 
 ../include/UnitImages.h
 

@@ -3,6 +3,7 @@
 
 CMakeFiles/game.dir/main.cpp.o
  ../include/Archer.h
+ ../include/BasicUnits.h
  ../include/Catapult.h
  ../include/Cavalery.h
  ../include/Cursor.h

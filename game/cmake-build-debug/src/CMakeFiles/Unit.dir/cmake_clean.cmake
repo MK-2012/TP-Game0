@@ -1,5 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Unit.dir/Unit.cpp.o"
+  "CMakeFiles/Unit.dir/Archer.cpp.o"
+  "CMakeFiles/Unit.dir/BasicUnits.cpp.o"
+  "CMakeFiles/Unit.dir/Catapult.cpp.o"
+  "CMakeFiles/Unit.dir/Cavalery.cpp.o"
+  "CMakeFiles/Unit.dir/HorseArcher.cpp.o"
   "libUnit.pdb"
   "libUnit.so"
 )

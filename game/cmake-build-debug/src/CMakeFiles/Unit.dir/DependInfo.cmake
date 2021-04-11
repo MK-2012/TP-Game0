@@ -4,7 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/mikhail_2012/TP-Game/game/src/Unit.cpp" "/home/mikhail_2012/TP-Game/game/cmake-build-debug/src/CMakeFiles/Unit.dir/Unit.cpp.o"
+  "/home/mikhail_2012/TP-Game/game/src/Archer.cpp" "/home/mikhail_2012/TP-Game/game/cmake-build-debug/src/CMakeFiles/Unit.dir/Archer.cpp.o"
+  "/home/mikhail_2012/TP-Game/game/src/BasicUnits.cpp" "/home/mikhail_2012/TP-Game/game/cmake-build-debug/src/CMakeFiles/Unit.dir/BasicUnits.cpp.o"
+  "/home/mikhail_2012/TP-Game/game/src/Catapult.cpp" "/home/mikhail_2012/TP-Game/game/cmake-build-debug/src/CMakeFiles/Unit.dir/Catapult.cpp.o"
+  "/home/mikhail_2012/TP-Game/game/src/Cavalery.cpp" "/home/mikhail_2012/TP-Game/game/cmake-build-debug/src/CMakeFiles/Unit.dir/Cavalery.cpp.o"
+  "/home/mikhail_2012/TP-Game/game/src/HorseArcher.cpp" "/home/mikhail_2012/TP-Game/game/cmake-build-debug/src/CMakeFiles/Unit.dir/HorseArcher.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,8 +19,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/usr/include/cairo"
   "../include"
+  "/usr/include/cairo"
   )
 
 # Targets to which this target links.

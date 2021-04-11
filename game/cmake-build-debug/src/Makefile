@@ -310,6 +310,114 @@ StructureTreasury/fast:
 	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/StructureTreasury.dir/build.make src/CMakeFiles/StructureTreasury.dir/build
 .PHONY : StructureTreasury/fast
 
+Archer.o: Archer.cpp.o
+
+.PHONY : Archer.o
+
+# target to build an object file
+Archer.cpp.o:
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Unit.dir/build.make src/CMakeFiles/Unit.dir/Archer.cpp.o
+.PHONY : Archer.cpp.o
+
+Archer.i: Archer.cpp.i
+
+.PHONY : Archer.i
+
+# target to preprocess a source file
+Archer.cpp.i:
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Unit.dir/build.make src/CMakeFiles/Unit.dir/Archer.cpp.i
+.PHONY : Archer.cpp.i
+
+Archer.s: Archer.cpp.s
+
+.PHONY : Archer.s
+
+# target to generate assembly for a file
+Archer.cpp.s:
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Unit.dir/build.make src/CMakeFiles/Unit.dir/Archer.cpp.s
+.PHONY : Archer.cpp.s
+
+BasicUnits.o: BasicUnits.cpp.o
+
+.PHONY : BasicUnits.o
+
+# target to build an object file
+BasicUnits.cpp.o:
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Unit.dir/build.make src/CMakeFiles/Unit.dir/BasicUnits.cpp.o
+.PHONY : BasicUnits.cpp.o
+
+BasicUnits.i: BasicUnits.cpp.i
+
+.PHONY : BasicUnits.i
+
+# target to preprocess a source file
+BasicUnits.cpp.i:
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Unit.dir/build.make src/CMakeFiles/Unit.dir/BasicUnits.cpp.i
+.PHONY : BasicUnits.cpp.i
+
+BasicUnits.s: BasicUnits.cpp.s
+
+.PHONY : BasicUnits.s
+
+# target to generate assembly for a file
+BasicUnits.cpp.s:
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Unit.dir/build.make src/CMakeFiles/Unit.dir/BasicUnits.cpp.s
+.PHONY : BasicUnits.cpp.s
+
+Catapult.o: Catapult.cpp.o
+
+.PHONY : Catapult.o
+
+# target to build an object file
+Catapult.cpp.o:
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Unit.dir/build.make src/CMakeFiles/Unit.dir/Catapult.cpp.o
+.PHONY : Catapult.cpp.o
+
+Catapult.i: Catapult.cpp.i
+
+.PHONY : Catapult.i
+
+# target to preprocess a source file
+Catapult.cpp.i:
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Unit.dir/build.make src/CMakeFiles/Unit.dir/Catapult.cpp.i
+.PHONY : Catapult.cpp.i
+
+Catapult.s: Catapult.cpp.s
+
+.PHONY : Catapult.s
+
+# target to generate assembly for a file
+Catapult.cpp.s:
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Unit.dir/build.make src/CMakeFiles/Unit.dir/Catapult.cpp.s
+.PHONY : Catapult.cpp.s
+
+Cavalery.o: Cavalery.cpp.o
+
+.PHONY : Cavalery.o
+
+# target to build an object file
+Cavalery.cpp.o:
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Unit.dir/build.make src/CMakeFiles/Unit.dir/Cavalery.cpp.o
+.PHONY : Cavalery.cpp.o
+
+Cavalery.i: Cavalery.cpp.i
+
+.PHONY : Cavalery.i
+
+# target to preprocess a source file
+Cavalery.cpp.i:
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Unit.dir/build.make src/CMakeFiles/Unit.dir/Cavalery.cpp.i
+.PHONY : Cavalery.cpp.i
+
+Cavalery.s: Cavalery.cpp.s
+
+.PHONY : Cavalery.s
+
+# target to generate assembly for a file
+Cavalery.cpp.s:
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Unit.dir/build.make src/CMakeFiles/Unit.dir/Cavalery.cpp.s
+.PHONY : Cavalery.cpp.s
+
 Cursor.o: Cursor.cpp.o
 
 .PHONY : Cursor.o
@@ -336,6 +444,33 @@ Cursor.s: Cursor.cpp.s
 Cursor.cpp.s:
 	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Cursor.dir/build.make src/CMakeFiles/Cursor.dir/Cursor.cpp.s
 .PHONY : Cursor.cpp.s
+
+HorseArcher.o: HorseArcher.cpp.o
+
+.PHONY : HorseArcher.o
+
+# target to build an object file
+HorseArcher.cpp.o:
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Unit.dir/build.make src/CMakeFiles/Unit.dir/HorseArcher.cpp.o
+.PHONY : HorseArcher.cpp.o
+
+HorseArcher.i: HorseArcher.cpp.i
+
+.PHONY : HorseArcher.i
+
+# target to preprocess a source file
+HorseArcher.cpp.i:
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Unit.dir/build.make src/CMakeFiles/Unit.dir/HorseArcher.cpp.i
+.PHONY : HorseArcher.cpp.i
+
+HorseArcher.s: HorseArcher.cpp.s
+
+.PHONY : HorseArcher.s
+
+# target to generate assembly for a file
+HorseArcher.cpp.s:
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Unit.dir/build.make src/CMakeFiles/Unit.dir/HorseArcher.cpp.s
+.PHONY : HorseArcher.cpp.s
 
 Player.o: Player.cpp.o
 
@@ -472,33 +607,6 @@ Treasury.cpp.s:
 	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Treasury.dir/build.make src/CMakeFiles/Treasury.dir/Treasury.cpp.s
 .PHONY : Treasury.cpp.s
 
-Unit.o: Unit.cpp.o
-
-.PHONY : Unit.o
-
-# target to build an object file
-Unit.cpp.o:
-	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Unit.dir/build.make src/CMakeFiles/Unit.dir/Unit.cpp.o
-.PHONY : Unit.cpp.o
-
-Unit.i: Unit.cpp.i
-
-.PHONY : Unit.i
-
-# target to preprocess a source file
-Unit.cpp.i:
-	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Unit.dir/build.make src/CMakeFiles/Unit.dir/Unit.cpp.i
-.PHONY : Unit.cpp.i
-
-Unit.s: Unit.cpp.s
-
-.PHONY : Unit.s
-
-# target to generate assembly for a file
-Unit.cpp.s:
-	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Unit.dir/build.make src/CMakeFiles/Unit.dir/Unit.cpp.s
-.PHONY : Unit.cpp.s
-
 UnitTreasury.o: UnitTreasury.cpp.o
 
 .PHONY : UnitTreasury.o
@@ -601,9 +709,24 @@ help:
 	@echo "... Treasury"
 	@echo "... Unit"
 	@echo "... UnitTreasury"
+	@echo "... Archer.o"
+	@echo "... Archer.i"
+	@echo "... Archer.s"
+	@echo "... BasicUnits.o"
+	@echo "... BasicUnits.i"
+	@echo "... BasicUnits.s"
+	@echo "... Catapult.o"
+	@echo "... Catapult.i"
+	@echo "... Catapult.s"
+	@echo "... Cavalery.o"
+	@echo "... Cavalery.i"
+	@echo "... Cavalery.s"
 	@echo "... Cursor.o"
 	@echo "... Cursor.i"
 	@echo "... Cursor.s"
+	@echo "... HorseArcher.o"
+	@echo "... HorseArcher.i"
+	@echo "... HorseArcher.s"
 	@echo "... Player.o"
 	@echo "... Player.i"
 	@echo "... Player.s"
@@ -619,9 +742,6 @@ help:
 	@echo "... Treasury.o"
 	@echo "... Treasury.i"
 	@echo "... Treasury.s"
-	@echo "... Unit.o"
-	@echo "... Unit.i"
-	@echo "... Unit.s"
 	@echo "... UnitTreasury.o"
 	@echo "... UnitTreasury.i"
 	@echo "... UnitTreasury.s"

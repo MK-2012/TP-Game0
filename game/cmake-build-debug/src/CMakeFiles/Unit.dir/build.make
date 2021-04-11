@@ -76,30 +76,90 @@ include src/CMakeFiles/Unit.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/Unit.dir/flags.make
 
-src/CMakeFiles/Unit.dir/Unit.cpp.o: src/CMakeFiles/Unit.dir/flags.make
-src/CMakeFiles/Unit.dir/Unit.cpp.o: ../src/Unit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mikhail_2012/TP-Game/game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/Unit.dir/Unit.cpp.o"
-	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug/src && /bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Unit.dir/Unit.cpp.o -c /home/mikhail_2012/TP-Game/game/src/Unit.cpp
+src/CMakeFiles/Unit.dir/BasicUnits.cpp.o: src/CMakeFiles/Unit.dir/flags.make
+src/CMakeFiles/Unit.dir/BasicUnits.cpp.o: ../src/BasicUnits.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mikhail_2012/TP-Game/game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/Unit.dir/BasicUnits.cpp.o"
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug/src && /bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Unit.dir/BasicUnits.cpp.o -c /home/mikhail_2012/TP-Game/game/src/BasicUnits.cpp
 
-src/CMakeFiles/Unit.dir/Unit.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Unit.dir/Unit.cpp.i"
-	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug/src && /bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mikhail_2012/TP-Game/game/src/Unit.cpp > CMakeFiles/Unit.dir/Unit.cpp.i
+src/CMakeFiles/Unit.dir/BasicUnits.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Unit.dir/BasicUnits.cpp.i"
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug/src && /bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mikhail_2012/TP-Game/game/src/BasicUnits.cpp > CMakeFiles/Unit.dir/BasicUnits.cpp.i
 
-src/CMakeFiles/Unit.dir/Unit.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Unit.dir/Unit.cpp.s"
-	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug/src && /bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mikhail_2012/TP-Game/game/src/Unit.cpp -o CMakeFiles/Unit.dir/Unit.cpp.s
+src/CMakeFiles/Unit.dir/BasicUnits.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Unit.dir/BasicUnits.cpp.s"
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug/src && /bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mikhail_2012/TP-Game/game/src/BasicUnits.cpp -o CMakeFiles/Unit.dir/BasicUnits.cpp.s
+
+src/CMakeFiles/Unit.dir/Archer.cpp.o: src/CMakeFiles/Unit.dir/flags.make
+src/CMakeFiles/Unit.dir/Archer.cpp.o: ../src/Archer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mikhail_2012/TP-Game/game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/Unit.dir/Archer.cpp.o"
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug/src && /bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Unit.dir/Archer.cpp.o -c /home/mikhail_2012/TP-Game/game/src/Archer.cpp
+
+src/CMakeFiles/Unit.dir/Archer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Unit.dir/Archer.cpp.i"
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug/src && /bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mikhail_2012/TP-Game/game/src/Archer.cpp > CMakeFiles/Unit.dir/Archer.cpp.i
+
+src/CMakeFiles/Unit.dir/Archer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Unit.dir/Archer.cpp.s"
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug/src && /bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mikhail_2012/TP-Game/game/src/Archer.cpp -o CMakeFiles/Unit.dir/Archer.cpp.s
+
+src/CMakeFiles/Unit.dir/Catapult.cpp.o: src/CMakeFiles/Unit.dir/flags.make
+src/CMakeFiles/Unit.dir/Catapult.cpp.o: ../src/Catapult.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mikhail_2012/TP-Game/game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/Unit.dir/Catapult.cpp.o"
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug/src && /bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Unit.dir/Catapult.cpp.o -c /home/mikhail_2012/TP-Game/game/src/Catapult.cpp
+
+src/CMakeFiles/Unit.dir/Catapult.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Unit.dir/Catapult.cpp.i"
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug/src && /bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mikhail_2012/TP-Game/game/src/Catapult.cpp > CMakeFiles/Unit.dir/Catapult.cpp.i
+
+src/CMakeFiles/Unit.dir/Catapult.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Unit.dir/Catapult.cpp.s"
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug/src && /bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mikhail_2012/TP-Game/game/src/Catapult.cpp -o CMakeFiles/Unit.dir/Catapult.cpp.s
+
+src/CMakeFiles/Unit.dir/Cavalery.cpp.o: src/CMakeFiles/Unit.dir/flags.make
+src/CMakeFiles/Unit.dir/Cavalery.cpp.o: ../src/Cavalery.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mikhail_2012/TP-Game/game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/Unit.dir/Cavalery.cpp.o"
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug/src && /bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Unit.dir/Cavalery.cpp.o -c /home/mikhail_2012/TP-Game/game/src/Cavalery.cpp
+
+src/CMakeFiles/Unit.dir/Cavalery.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Unit.dir/Cavalery.cpp.i"
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug/src && /bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mikhail_2012/TP-Game/game/src/Cavalery.cpp > CMakeFiles/Unit.dir/Cavalery.cpp.i
+
+src/CMakeFiles/Unit.dir/Cavalery.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Unit.dir/Cavalery.cpp.s"
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug/src && /bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mikhail_2012/TP-Game/game/src/Cavalery.cpp -o CMakeFiles/Unit.dir/Cavalery.cpp.s
+
+src/CMakeFiles/Unit.dir/HorseArcher.cpp.o: src/CMakeFiles/Unit.dir/flags.make
+src/CMakeFiles/Unit.dir/HorseArcher.cpp.o: ../src/HorseArcher.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mikhail_2012/TP-Game/game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/Unit.dir/HorseArcher.cpp.o"
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug/src && /bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Unit.dir/HorseArcher.cpp.o -c /home/mikhail_2012/TP-Game/game/src/HorseArcher.cpp
+
+src/CMakeFiles/Unit.dir/HorseArcher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Unit.dir/HorseArcher.cpp.i"
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug/src && /bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mikhail_2012/TP-Game/game/src/HorseArcher.cpp > CMakeFiles/Unit.dir/HorseArcher.cpp.i
+
+src/CMakeFiles/Unit.dir/HorseArcher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Unit.dir/HorseArcher.cpp.s"
+	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug/src && /bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mikhail_2012/TP-Game/game/src/HorseArcher.cpp -o CMakeFiles/Unit.dir/HorseArcher.cpp.s
 
 # Object files for target Unit
 Unit_OBJECTS = \
-"CMakeFiles/Unit.dir/Unit.cpp.o"
+"CMakeFiles/Unit.dir/BasicUnits.cpp.o" \
+"CMakeFiles/Unit.dir/Archer.cpp.o" \
+"CMakeFiles/Unit.dir/Catapult.cpp.o" \
+"CMakeFiles/Unit.dir/Cavalery.cpp.o" \
+"CMakeFiles/Unit.dir/HorseArcher.cpp.o"
 
 # External object files for target Unit
 Unit_EXTERNAL_OBJECTS =
 
-src/libUnit.so: src/CMakeFiles/Unit.dir/Unit.cpp.o
+src/libUnit.so: src/CMakeFiles/Unit.dir/BasicUnits.cpp.o
+src/libUnit.so: src/CMakeFiles/Unit.dir/Archer.cpp.o
+src/libUnit.so: src/CMakeFiles/Unit.dir/Catapult.cpp.o
+src/libUnit.so: src/CMakeFiles/Unit.dir/Cavalery.cpp.o
+src/libUnit.so: src/CMakeFiles/Unit.dir/HorseArcher.cpp.o
 src/libUnit.so: src/CMakeFiles/Unit.dir/build.make
 src/libUnit.so: src/CMakeFiles/Unit.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mikhail_2012/TP-Game/game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libUnit.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/mikhail_2012/TP-Game/game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library libUnit.so"
 	cd /home/mikhail_2012/TP-Game/game/cmake-build-debug/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Unit.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -4,7 +4,7 @@
 # compile CXX with /bin/g++
 CXX_DEFINES = -DGameField_EXPORTS
 
-CXX_INCLUDES = -I/usr/include/cairo -I/home/mikhail_2012/TP-Game/game/include
+CXX_INCLUDES = -I/home/mikhail_2012/TP-Game/game/include -I/usr/include/cairo
 
 CXX_FLAGS = -g -fPIC -std=gnu++11
 

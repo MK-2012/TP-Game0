@@ -6,29 +6,3 @@
 
 #IncludeRegexTransform: 
 
-../include/PlayerEnum.h
-
-../include/Structure.h
-StructureImages.h
-../include/StructureImages.h
-PlayerEnum.h
-../include/PlayerEnum.h
-string
--
-
-../include/StructureImages.h
-
-../include/StructureTreasury.h
-set
--
-vector
--
-PlayerEnum.h
-../include/PlayerEnum.h
-Structure.h
-../include/Structure.h
-
-/home/mikhail_2012/TP-Game/game/src/StructureTreasury.cpp
-StructureTreasury.h
-/home/mikhail_2012/TP-Game/game/src/StructureTreasury.h
-

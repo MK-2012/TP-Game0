@@ -6,10 +6,6 @@
 #include "graphics.h"
 #include "Structure.h"
 #include "Unit.h"
-#include "Archer.h"
-#include "Cavalery.h"
-#include "HorseArcher.h"
-#include "Catapult.h"
 #include "Cursor.h"
 #include <unistd.h>
 

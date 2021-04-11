@@ -3,6 +3,7 @@
 #include "UnitImages.h"
 #include <iostream>
 #include "PlayerEnum.h"
+#include "BasicUnits.h"
 
 
 class HorseArcher: public Unit {

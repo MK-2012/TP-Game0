@@ -5,7 +5,7 @@
 		<Option title="game"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\src\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\src\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/mikhail_2012/TP-Game/game/cmake-build-debug"/>
@@ -134,8 +134,8 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/cairo"/>
 					<Add directory="/home/mikhail_2012/TP-Game/game/include"/>
+					<Add directory="/usr/include/cairo"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
@@ -158,8 +158,8 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/cairo"/>
 					<Add directory="/home/mikhail_2012/TP-Game/game/include"/>
+					<Add directory="/usr/include/cairo"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
@@ -182,8 +182,8 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/cairo"/>
 					<Add directory="/home/mikhail_2012/TP-Game/game/include"/>
+					<Add directory="/usr/include/cairo"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
@@ -206,8 +206,8 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/cairo"/>
 					<Add directory="/home/mikhail_2012/TP-Game/game/include"/>
+					<Add directory="/usr/include/cairo"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
@@ -230,8 +230,8 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/cairo"/>
 					<Add directory="/home/mikhail_2012/TP-Game/game/include"/>
+					<Add directory="/usr/include/cairo"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
@@ -254,8 +254,8 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/cairo"/>
 					<Add directory="/home/mikhail_2012/TP-Game/game/include"/>
+					<Add directory="/usr/include/cairo"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
@@ -278,8 +278,8 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/cairo"/>
 					<Add directory="/home/mikhail_2012/TP-Game/game/include"/>
+					<Add directory="/usr/include/cairo"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
@@ -302,8 +302,8 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/cairo"/>
 					<Add directory="/home/mikhail_2012/TP-Game/game/include"/>
+					<Add directory="/usr/include/cairo"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
@@ -326,8 +326,8 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/cairo"/>
 					<Add directory="/home/mikhail_2012/TP-Game/game/include"/>
+					<Add directory="/usr/include/cairo"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
@@ -350,8 +350,8 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/cairo"/>
 					<Add directory="/home/mikhail_2012/TP-Game/game/include"/>
+					<Add directory="/usr/include/cairo"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
@@ -375,8 +375,8 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DIMAGE_DIR=&quot;/home/mikhail_2012/TP-Game/game/images/&quot;"/>
-					<Add directory="/usr/include/cairo"/>
 					<Add directory="/home/mikhail_2012/TP-Game/game/include"/>
+					<Add directory="/usr/include/cairo"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
@@ -400,8 +400,8 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DIMAGE_DIR=&quot;/home/mikhail_2012/TP-Game/game/images/&quot;"/>
-					<Add directory="/usr/include/cairo"/>
 					<Add directory="/home/mikhail_2012/TP-Game/game/include"/>
+					<Add directory="/usr/include/cairo"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
@@ -424,8 +424,8 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/cairo"/>
 					<Add directory="/home/mikhail_2012/TP-Game/game/include"/>
+					<Add directory="/usr/include/cairo"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
@@ -448,8 +448,8 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/cairo"/>
 					<Add directory="/home/mikhail_2012/TP-Game/game/include"/>
+					<Add directory="/usr/include/cairo"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
@@ -472,8 +472,8 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/cairo"/>
 					<Add directory="/home/mikhail_2012/TP-Game/game/include"/>
+					<Add directory="/usr/include/cairo"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
@@ -496,8 +496,8 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/cairo"/>
 					<Add directory="/home/mikhail_2012/TP-Game/game/include"/>
+					<Add directory="/usr/include/cairo"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
@@ -520,8 +520,8 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/cairo"/>
 					<Add directory="/home/mikhail_2012/TP-Game/game/include"/>
+					<Add directory="/usr/include/cairo"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
@@ -544,8 +544,8 @@
 				<Option type="3"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/cairo"/>
 					<Add directory="/home/mikhail_2012/TP-Game/game/include"/>
+					<Add directory="/usr/include/cairo"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
@@ -565,8 +565,23 @@
 		<Unit filename="/home/mikhail_2012/TP-Game/game/main.cpp">
 			<Option target="game"/>
 		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game/game/src/Archer.cpp">
+			<Option target="Unit"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game/game/src/BasicUnits.cpp">
+			<Option target="Unit"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game/game/src/Catapult.cpp">
+			<Option target="Unit"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game/game/src/Cavalery.cpp">
+			<Option target="Unit"/>
+		</Unit>
 		<Unit filename="/home/mikhail_2012/TP-Game/game/src/Cursor.cpp">
 			<Option target="Cursor"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game/game/src/HorseArcher.cpp">
+			<Option target="Unit"/>
 		</Unit>
 		<Unit filename="/home/mikhail_2012/TP-Game/game/src/Player.cpp">
 			<Option target="Player"/>
@@ -583,9 +598,6 @@
 		<Unit filename="/home/mikhail_2012/TP-Game/game/src/Treasury.cpp">
 			<Option target="Treasury"/>
 		</Unit>
-		<Unit filename="/home/mikhail_2012/TP-Game/game/src/Unit.cpp">
-			<Option target="Unit"/>
-		</Unit>
 		<Unit filename="/home/mikhail_2012/TP-Game/game/src/UnitTreasury.cpp">
 			<Option target="UnitTreasury"/>
 		</Unit>
@@ -597,6 +609,9 @@
 		</Unit>
 		<Unit filename="/home/mikhail_2012/TP-Game/game/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game/game/cmake/FindCairo.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
 		</Unit>
 		<Unit filename="/home/mikhail_2012/TP-Game/game/src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\"/>
