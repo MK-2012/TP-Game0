@@ -10,5 +10,7 @@
 #Cmake folders
 /cmake
 /cmake-build-debug
+/game/cmake-build-debug
+canvas.png
 /lib
 .idea
