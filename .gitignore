@@ -11,6 +11,9 @@
 /cmake
 /cmake-build-debug
 /game/cmake-build-debug
+/game/build
+/game/canvas.png
+/dame/.idea
 canvas.png
 /lib
 .idea
