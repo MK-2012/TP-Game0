@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/PlayerEnum.h
+
+../include/Unit.h
+UnitImages.h
+../include/UnitImages.h
+iostream
+-
+PlayerEnum.h
+../include/PlayerEnum.h
+
+../include/UnitImages.h
+
+../include/UnitTreasury.h
+set
+-
+vector
+-
+PlayerEnum.h
+../include/PlayerEnum.h
+Unit.h
+../include/Unit.h
+
+/home/mikhail_2012/TP-Game/game/src/UnitTreasury.cpp
+UnitTreasury.h
+/home/mikhail_2012/TP-Game/game/src/UnitTreasury.h
+

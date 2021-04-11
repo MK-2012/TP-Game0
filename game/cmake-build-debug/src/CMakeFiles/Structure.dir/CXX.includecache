@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/PlayerEnum.h
+
+../include/Structure.h
+StructureImages.h
+../include/StructureImages.h
+PlayerEnum.h
+../include/PlayerEnum.h
+string
+-
+
+../include/StructureImages.h
+
+/home/mikhail_2012/TP-Game/game/src/Structure.cpp
+Structure.h
+/home/mikhail_2012/TP-Game/game/src/Structure.h
+
