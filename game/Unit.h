@@ -15,12 +15,11 @@ public:
         return true;
     }
     virtual void move(int delta_x, int delta_y) {
-        if (place -> field.cellIsFree(place->x + delta_x, place->y + delta_y)) {
+        if (place->field.cellIsFree(place->x + delta_x, place->y + delta_y)) {
             if (allowed_to_move()) {
                 Cell* next_place = ((place->field))[place->x + delta_x][place->y + delta_y];
                 std::swap(place->located_unit, next_place->located_unit);
                 std::swap(place->located_unit->place, next_place->located_unit->place);
-
             }
         }
     }
@@ -39,6 +38,7 @@ public:
     virtual bool allowed_to_move() = 0;
     virtual bool allowedToMoveAim(size_t x, size_t y) = 0;
     uint16_t attack(Unit_<Cell>* aimed_unit) {
+
         if (aimed_unit != this) {
             return damage();
         }
