@@ -26,7 +26,7 @@ public:
     FieldPainter(const Field& field_to_paint) : field(field_to_paint) {
         surface = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, field.x_size * cell_size_, field.y_size * cell_size_);
     }
-    void operator () (const Cell* cell) {D
+    void operator () (const Cell* cell) {
         cairo_t* cr;
         cr = cairo_create(surface);
 
