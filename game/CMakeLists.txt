@@ -6,10 +6,10 @@ set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES main.cpp game_field.h graphics.h Unit.h Structure.h)
 
-
 find_package(Cairo)
 include_directories(${CAIRO_INCLUDE_DIRS})
 add_executable(game ${SOURCE_FILES})
+target_compile_definitions(game PUBLIC IMAGE_DIR="${CMAKE_SOURCE_DIR}/images/")
 
 link_directories(${CAIRO_LIBRARY_DIRS})
 target_link_libraries(game ${CAIRO_LIBRARIES})

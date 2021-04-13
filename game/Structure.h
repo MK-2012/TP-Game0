@@ -43,7 +43,7 @@ public:
 };
 
 template<typename Cell>
-const std::string Grass_<Cell>::image_placement_ = "images/structures/Grass1.png";
+const std::string Grass_<Cell>::image_placement_ = std::string(IMAGE_DIR) + "structures/Grass1.png";
 
 
 template<typename Cell>
@@ -61,5 +61,5 @@ public:
 };
 
 template<typename Cell>
-const std::string River_<Cell>::image_placement_ = "images/structures/River5.png";
+const std::string River_<Cell>::image_placement_ = std::string(IMAGE_DIR) + "structures/River5.png";
 
