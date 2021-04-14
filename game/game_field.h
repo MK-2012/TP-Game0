@@ -142,7 +142,9 @@ public:
     void attack() {
         auto aimed_unit = unit->place->field[x][y]->located_unit;
         if (aimed_unit->get_damage(unit->damage())) {
-            aimed_unit->~Unit_<Cell>();
+            Cell* cell = aimed_unit -> place;
+	    delete aimed_unit;
+	    aimed_unit = new NonExistentUnit_<Cell>(cell);
         }
     }
 
