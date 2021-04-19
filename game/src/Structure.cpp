@@ -1,6 +1,9 @@
 #include "Structure.h"
 
-Structure::Structure(PlayerEnum player): player_(player){}
+Structure::Structure(PlayerEnum player, int hp): player_(player), hp_(hp){}
+int Structure::hp() {
+    return hp_;
+}
 
 std::string Structure::name() {
     return "Structure";
@@ -11,7 +14,7 @@ int Structure::income() {
 }
 
 
-Landscape::Landscape(PlayerEnum player): Structure(player){}
+Landscape::Landscape(PlayerEnum player, int hp): Structure(player, hp){}
 
 std::string Landscape::name() {
     return "Landscape";
@@ -19,7 +22,7 @@ std::string Landscape::name() {
 
 Landscape::~Landscape() = default;
 
-Grass::Grass(PlayerEnum player): Landscape(player) {}
+Grass::Grass(PlayerEnum player, int hp): Landscape(player, hp) {}
 const StructureImages Grass::image_placement_ = GrassImage;
 
 StructureImages Grass::image() {
@@ -48,13 +51,13 @@ bool River::isAllowedToGoIn() {
 
 River::~River() = default;
 
-River::River(PlayerEnum player): Landscape(player){}
+River::River(PlayerEnum player, int hp): Landscape(player, hp){}
 
 std::string River::name() {
     return "River";
 }
 
-MemeFabric::MemeFabric(PlayerEnum player): Grass(player) {}
+MemeFabric::MemeFabric(PlayerEnum player, int hp): Grass(player, hp) {}
 const StructureImages MemeFabric::image_placement_ = MemeFabricImage;
 
 StructureImages MemeFabric::image() {

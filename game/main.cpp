@@ -24,7 +24,8 @@ void emplaceUnit(Player &player) {
         }
     } else {
         std::cout << "\n you have " << player.treasury.memesLimit() << "TB of memes and you have already used "
-                  << player.treasury.requiredMemes() << "TB of memes and "<< UnitType::name_ <<" costs " << UnitType::cost_
+                  << player.treasury.requiredMemes() << "TB of memes and " << UnitType::name_ << " costs "
+                  << UnitType::cost_
                   << "TB of memes";
     }
 }
@@ -33,11 +34,11 @@ void emplaceUnit(Player &player) {
 template<typename StructureType>
 void emplaceStructure(Player &player) {
     Cell *cell = player.control.get_cell();
-    if (cell->located_unit -> canConstruct()) {
+    if (cell->located_unit->canConstruct()) {
         if (cell->located_structure->name() == "Grass") {
             delete cell->located_structure;
             cell->located_structure = new StructureType(player.number);
-            player.treasury.insertStructure(cell -> located_structure);
+            player.treasury.insertStructure(cell->located_structure);
         }
     }
 }
@@ -63,6 +64,7 @@ public:
         ++place;
         return *this;
     }
+
     Stream &operator>>(int &c) {
         if (place >= str.size()) {
             place = 0;
@@ -118,8 +120,8 @@ void aimControl(Player &player, PlayerPainter &paint, Stream &input) {
 
 }
 
-void playTurn(Player* player, Stream& input, PlayerPainter* paint ,Field& field) {
-    Cursor* cursor = &player -> control;
+void playTurn(Player *player, Stream &input, PlayerPainter *paint, Field &field) {
+    Cursor *cursor = &player->control;
     char command;
     while (true) {
         bool quit = false;
@@ -128,16 +130,16 @@ void playTurn(Player* player, Stream& input, PlayerPainter* paint ,Field& field)
             case 'q':
                 throw 0;
             case 'w':
-                cursor -> move_up();
+                cursor->move_up();
                 break;
             case 'a':
-                cursor -> move_left();
+                cursor->move_left();
                 break;
             case 's':
-                cursor -> move_down();
+                cursor->move_down();
                 break;
             case 'd':
-                cursor -> move_right();
+                cursor->move_right();
                 break;
             case 'n': {
                 char unit;
@@ -155,15 +157,15 @@ void playTurn(Player* player, Stream& input, PlayerPainter* paint ,Field& field)
                     case 'v':
                         emplaceUnit<Cavalery>(*player);
                         break;
-                    case 'h':
-                        emplaceUnit<HorseArcher>(*player);
-                        break;
+//                    case 'h':
+//                        emplaceUnit<HorseArcher>(*player);
+//                        break;
                 }
                 break;
             }
             case 'e': {
-                if (cursor -> unit_attached) {
-                    cursor -> detachUnit();
+                if (cursor->unit_attached) {
+                    cursor->detachUnit();
                 } else {
                     try {
                         cursor->attachUnit();
@@ -176,7 +178,7 @@ void playTurn(Player* player, Stream& input, PlayerPainter* paint ,Field& field)
             case 'f':
                 if (cursor->unit_attached) {
                     Aim aim(*cursor);
-                    player -> aim = &aim;
+                    player->aim = &aim;
                     aimControl(*player, *paint, input);
                 }
                 break;
@@ -187,10 +189,10 @@ void playTurn(Player* player, Stream& input, PlayerPainter* paint ,Field& field)
             case 'm':
                 int num;
                 input >> num;
-                if(num < PlayersNum && num > 0) {
+                if (num < PlayersNum && num > 0) {
                     std::cout << "\n" << num << "\n";
                     player = &Player::get(playerNum(num), field);
-                    cursor = &(player -> control);
+                    cursor = &(player->control);
                     paint = &PlayerPainter::get(playerNum(num), field);
                 } else {
                     std::cout << "\n you have only " << PlayersNum << " players";
@@ -205,6 +207,15 @@ void playTurn(Player* player, Stream& input, PlayerPainter* paint ,Field& field)
                 emplaceStructure<MemeFabric>(*player);
                 std::cout << " constr";
                 break;
+            case 'i': {
+                auto *unit = cursor->get_cell()->located_unit;
+                auto *structure = cursor->get_cell()->located_structure;
+                std::cout << "Unit:\t\t" << unit->name() << "\n";
+                std::cout << "\t\t" << unit->hp() << "\n\n";
+                std::cout << "Structure:\t" << structure->name() << "\n";
+                std::cout << "\t\t" << structure->hp() << "\n\n";
+            }
+                break;
             case 'g':
                 quit = true;
                 break;
@@ -218,7 +229,7 @@ void playTurn(Player* player, Stream& input, PlayerPainter* paint ,Field& field)
 
 int main() {
     Stream input;
-    Field field(10, 10);
+    Field field(30, 30);
     Cursor *cursor = &((Player::get(Player1, field)).control);
     Player *player = &(Player::get(Player1, field));
     PlayerPainter *paint = &PlayerPainter::get(Player1, field);
@@ -232,15 +243,15 @@ int main() {
             playTurn(player, input, paint, field);
             player_num = 3 - player_num;
             player = &(Player::get(playerNum(player_num), field));
-            cursor = &(player -> control);
+            cursor = &(player->control);
             paint = &PlayerPainter::get(playerNum(player_num), field);
         }
     } catch (int) {
 
     }
 
-    paint -> allField();
-    paint -> show();
+    paint->allField();
+    paint->show();
     char command;
 
     paint->show();

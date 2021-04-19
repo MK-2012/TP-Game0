@@ -25,6 +25,15 @@ std::string path_to_image(UnitImages image) {
         case WorkerImage: {
             return std::string(IMAGE_DIR) + "units/worker.png";
         }
+        case ArcherImage: {
+            return std::string(IMAGE_DIR) + "units/archer.png";
+        }
+        case CavaleryImage: {
+            return std::string(IMAGE_DIR) + "units/cavalery.png";
+        }
+        case CatapultImage: {
+            return std::string(IMAGE_DIR) + "units/catapult.png";
+        }
 	}
 }
 
