@@ -3,3 +3,17 @@
 
 # Ada Library Information
 *.ali
+
+*.scf
+*.txt
+
+#Cmake folders
+/cmake
+/cmake-build-debug
+/game/cmake-build-debug
+/game/build
+/game/canvas.png
+/game/.idea
+canvas.png
+/lib
+.idea
