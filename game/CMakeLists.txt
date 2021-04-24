@@ -4,15 +4,24 @@ project(game)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp game_field.h graphics.h Unit.h Structure.h)
+set(SOURCE_FILES main.cpp)
 
-
+add_subdirectory(src)
 find_package(Cairo)
 include_directories(${CAIRO_INCLUDE_DIRS})
+include_directories(${CMAKE_SOURCE_DIR}/include)
 add_executable(game ${SOURCE_FILES})
+target_compile_definitions(game PUBLIC IMAGE_DIR="${CMAKE_SOURCE_DIR}/images/")
+
 
 link_directories(${CAIRO_LIBRARY_DIRS})
 target_link_libraries(game ${CAIRO_LIBRARIES})
+target_link_libraries(game Graphics)
+target_link_libraries(game GameField)
+target_link_libraries(game Structure)
+target_link_libraries(game Unit)
+target_link_libraries(game Cursor)
+target_link_libraries(game Player)
 install(
         TARGETS game
         RUNTIME DESTINATION bin
