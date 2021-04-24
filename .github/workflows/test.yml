@@ -33,7 +33,7 @@ jobs:
         run: |
           for test in $(ls ../../test_commands)
           do
-            cat "../../test_commands/"test | ./game
+            cat "../../test_commands/"$test | ./game
           done
           
       # Runs a set of commands using the runners shell
