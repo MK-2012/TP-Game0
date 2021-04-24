@@ -28,13 +28,10 @@ jobs:
           cd game
           ./run.sh build
           cd build 
-          echo "s
-          s
-          s
-          s
-          s
-          q
-          " | ./game
+          for test in $(ls ../../test_commands)
+          do
+            cat "../../test_commands/"test | ./game
+          done
           
       # Runs a set of commands using the runners shell
       - name: UploadArtifacts
