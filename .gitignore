@@ -5,10 +5,8 @@
 *.ali
 
 *.scf
-*.txt
 
 #Cmake folders
-/cmake
 /cmake-build-debug
 /lib
 .idea
