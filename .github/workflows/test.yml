@@ -35,7 +35,13 @@ jobs:
           mkdir canvases
           for test in $(ls ../../test_commands)
           do
-            cat "../../test_commands/"$test | ./game
+            cat "../../test_commands/"$test | ./game 2>  "$test"_test_report.txt
+            if [[ -s "$test"_test_report.txt ]] 
+            then 
+              mv "$test"_test_report.txt canvases/"$test"_test_report.txt
+            else
+              rm "$test"_test_report.txt
+            fi
             mv canvas.png canvases/"$test"canvas.png 
           done
           
