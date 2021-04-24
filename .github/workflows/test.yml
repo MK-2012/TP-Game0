@@ -31,6 +31,7 @@ jobs:
       
       - name: Run Tests
         run: |
+          cd game/build
           for test in $(ls ../../test_commands)
           do
             cat "../../test_commands/"$test | ./game
