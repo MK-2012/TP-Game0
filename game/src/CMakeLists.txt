@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
-find_package(Cairo)
+find_package(Cairo REQUIRED)
 include_directories(${CAIRO_INCLUDE_DIRS})
 add_library(Unit SHARED BasicUnits.cpp Archer.cpp Catapult.cpp Cavalery.cpp HorseArcher.cpp)
 add_library(Structure SHARED Structure.cpp)
