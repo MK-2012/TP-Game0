@@ -42,5 +42,5 @@ jobs:
         with:
           name: Canvas
           path: |
-            game/build/
+            game/build/canvas.png
       
