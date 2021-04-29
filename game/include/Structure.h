@@ -1,57 +1,84 @@
-//
-// Created by val-de-mar on 08.03.2021.
-//
+#pragma once
 
-#ifndef GAME_STRUCTURE_H
-#define GAME_STRUCTURE_H
 
-#endif //GAME_STRUCTURE_H
+#include "StructureImages.h"
+#include "PlayerEnum.h"
+#include <string>
 
-template<typename Cell>
-class Structure_ {
+
+
+class Structure {
+    int hp_;
 public:
-    Cell* place;
-    virtual const std::string& image() = 0;
-    virtual ~Structure_() = default;
+    PlayerEnum player_;
+
+    virtual int hp();
+    //virtual bool getDamage();
+    virtual StructureImages image() = 0;
+    virtual ~Structure() = default;
     virtual bool isAllowedToGoIn() = 0;
+    virtual std::string name();
+    virtual int income();
 protected:
-    explicit Structure_(Cell* place);
+    Structure(PlayerEnum, int);
 };
 
 
-template<typename Cell>
-class Landscape_ : public Structure_<Cell> {
+class Landscape: public Structure {
 public:
-    explicit Landscape_(Cell* place);
-    const std::string& image_placement() override = 0;
+    Landscape(PlayerEnum, int hp = 0);
+    StructureImages image() override = 0;
     bool isAllowedToGoIn() override = 0;
-    ~Landscape_() override = default;
+    std::string name() override;
+    ~Landscape() override;
 };
 
 
-template<typename Cell>
-class Grass_ : public Landscape_<Cell> {
-    const static std::string image_placement_;
+
+class Grass : public Landscape {
+    const static StructureImages image_placement_;
 public:
-    explicit Grass_(Cell* place);
-    const std::string& image_placement() override;
+    Grass(PlayerEnum, int hp = 0);
+    StructureImages image() override;
     bool isAllowedToGoIn() override;
-    ~Grass_() override = default;
+    std::string name() override;
+    ~Grass() override;
 };
 
 
 
 
 
-template<typename Cell>
-class River_ : public Landscape_<Cell> {
-    const static std::string image_placement_;
+class River : public Landscape {
+    const static StructureImages image_placement_;
 public:
-    explicit River_(Cell* place);
-    const std::string& image_placement() override;
+    River(PlayerEnum, int hp = 0);
+    StructureImages image() override;
     bool isAllowedToGoIn() override;
-    ~River_() override = default;
+    std::string name() override;
+    ~River() override;
+};
+
+
+class Mountains : public Landscape {
+	const static StructureImages image_placement_;
+public:
+	Mountains(PlayerEnum, int hp = 0);
+	StructureImages image() override;
+	bool isAllowedToGoIn() override;
+	std::string name() override;
+	~Mountains() override;
 };
 
 
 
+class MemeFabric : public Grass {
+    const static StructureImages image_placement_;
+public:
+    MemeFabric(PlayerEnum, int hp = 15);
+    StructureImages image() override;
+    bool isAllowedToGoIn() override;
+    std::string name() override;
+    int income() override;
+    ~MemeFabric() override;
+};

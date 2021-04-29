@@ -1,5 +1,5 @@
 #include "graphics.h"
-
+#include "iostream"
 
 std::string path_to_image(StructureImages image) {
 	switch (image) {
@@ -8,6 +8,12 @@ std::string path_to_image(StructureImages image) {
 		}
 		case RiverImage: {
 			return std::string(IMAGE_DIR) + "structures/River5.png";
+		}
+		case MemeFabricImage: {
+            return std::string(IMAGE_DIR) + "structures/memefabric.png";
+		}
+		case MountainImage: {
+			return std::string(IMAGE_DIR) + "structures/Mountains1.png";
 		}
 	}
 }
@@ -19,21 +25,39 @@ std::string path_to_image(UnitImages image) {
 		case ClubberImage: {
 			return std::string(IMAGE_DIR) + "units/clubber.png";
 		}
+        case WorkerImage: {
+            return std::string(IMAGE_DIR) + "units/worker.png";
+        }
+        case ArcherImage: {
+            return std::string(IMAGE_DIR) + "units/archer.png";
+        }
+        case CavaleryImage: {
+            return std::string(IMAGE_DIR) + "units/cavalery.png";
+        }
+        case CatapultImage: {
+            return std::string(IMAGE_DIR) + "units/catapult.png";
+        }
+        case HorseArcherImage: {
+			return std::string(IMAGE_DIR) + "units/horsearcher.png";
+        }
 	}
 }
 
-template<typename Field>
-const uint64_t FieldPainter<Field>::cell_size = 64;
-template<typename Field>
-const uint64_t FieldPainter<Field>::border_width = 2;
 
-template<typename Field>
-FieldPainter<Field>::FieldPainter(const Field& field_to_paint): field(field_to_paint) {
+const uint64_t PlayerPainter::cell_size = 64;
+
+const uint64_t PlayerPainter::border_width = 2;
+
+std::vector<bool> PlayerPainter::created = std::vector<bool>(PlayersNum, false);
+std::vector<PlayerPainter*> PlayerPainter::painters = std::vector<PlayerPainter*>(PlayersNum);
+
+
+PlayerPainter::PlayerPainter(const Player& player): field(player.control.field_), player_(player){
 	surface = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, field.x_size * cell_size, field.y_size * cell_size);
 }
 
-template<typename Field>
-void FieldPainter<Field>::operator()(const Cell* cell) {
+
+void PlayerPainter::operator()(const Cell* cell) {
 	cairo_t *cr;
 	cr = cairo_create(surface);
 
@@ -61,23 +85,28 @@ void FieldPainter<Field>::operator()(const Cell* cell) {
 
 	cairo_destroy(cr);
 }
-template<typename Field>
-void FieldPainter<Field>::show() {
+
+void PlayerPainter::show() {
+
 	cairo_surface_write_to_png(surface, "canvas.png");
+
 }
-template<typename Field>
-void FieldPainter<Field>::allField() {
+
+void PlayerPainter::allField() {
 	for (int i = 0; i < field.x_size; ++i) {
 		for (int j = 0; j < field.y_size; ++j) {
 			(*this)(field[i][j]);
 		}
 	}
-	for (auto cursor: field.cursors) {
-		aim(cursor->x, cursor->y, cursor->image());
-	}
+
+    cursorPaint(player_.control.x, player_.control.y, player_.control.image());
+    if (player_.aim != nullptr) {
+        cursorPaint(player_.aim->x, player_.aim->y, player_.aim->image());
+    }
+
 }
-template<typename Field>
-void FieldPainter<Field>::aim(size_t x, size_t y, CursorImages image) {
+
+void PlayerPainter::cursorPaint(size_t x, size_t y, CursorImages image) {
 	cairo_t *cr;
 	cr = cairo_create(surface);
 	cairo_set_line_width(cr,2);
@@ -108,25 +137,14 @@ void FieldPainter<Field>::aim(size_t x, size_t y, CursorImages image) {
 	cairo_stroke(cr);
 	cairo_destroy(cr);
 }
-//	  template<typename Field>
-//	  void FieldPainter<Field>::aim(size_t x, size_t y, CursorImages image) {
-//		  cairo_t *cr;
-//        cr = cairo_create(surface);
-//        cairo_set_line_width(cr,1);
-//        cairo_set_source_rgb(cr, 0, 0, 0);
-//
-//        cairo_move_to(cr, x * 20 + 0.5, y * 20 + 0.5);
-//        cairo_line_to(cr, x * 20 + 19.5, y * 20 + 0.5);
-//
-//        cairo_move_to(cr, x * 20 + 19.5, y * 20 + 0.5);
-//        cairo_line_to(cr, x * 20 + 19.5, y * 20 + 19.5);
-//
-//        cairo_move_to(cr, x * 20 + 19.5, y * 20 + 19.5);
-//        cairo_line_to(cr, x * 20 + 0.5, y * 20 + 19.5);
-//
-//        cairo_move_to(cr, x * 20 + 0.5, y * 20 + 19.5);
-//        cairo_line_to(cr, x * 20 + 0.5, y * 20 + 0.5);
-//
-//        cairo_stroke(cr);
-//        cairo_destroy(cr);
-//    }
+
+PlayerPainter &PlayerPainter::get(PlayerEnum player, Field& field) {
+    int num = playerNum(player);
+    if(created[num]) {
+        return *painters[num];
+    } else {
+        created[num] = true;
+        painters[num] = new PlayerPainter(Player::get(player, field));
+        return *painters[num];
+    }
+}

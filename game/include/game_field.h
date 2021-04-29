@@ -1,12 +1,40 @@
+#pragma once
+
+#include <iostream>
+#include <utility>
+#include <vector>
+#include <string>
 #include "Unit.h"
 #include "Structure.h"
-#include "graphics.h"
+#include "Rivers.h"
+#include <random>
 
 class Field;
 class Cell;
 class Aim;
 
 
+using vvi = std::vector<std::vector<int>>;
+
+
+enum MapPresets {
+	standard
+};
+
+
+
+class UnitAttachingException: public std::exception {
+private:
+    std::string m_error;
+
+public:
+    explicit UnitAttachingException(std::string&& error);
+    explicit UnitAttachingException(const char* error);
+
+    explicit UnitAttachingException(std::string error);
+
+    const char* what() const noexcept override;
+};
 
 
 class Cell {
@@ -14,76 +42,35 @@ public:
     size_t x;
     size_t y;
     Field& field;
-    Unit_<Cell>* located_unit;
-    Structure_<Cell>* located_structure;
-    Cell(Field &field, int x, int y);
-    friend void emplaceUnit(Cell* cell);
-    bool isAllowedToGoIn();
+    Unit* located_unit;
+    Structure* located_structure;
+    Cell(Field &field, int x, int y, int cell_type);
+    bool isAllowedToGoIn() const;
 };
 
 
 
 class Field {
-    friend FieldPainter<Field>;
 private:
-    using CellType = Cell;
-    std::vector<std::vector<CellType*>> field;
-    FieldPainter<Field> paint;
+    std::vector<std::vector<Cell*>> field;
+
+	void generate_preset(MapPresets preset, vvi& map_to_generate);
+
+    void generate_map(vvi& map_to_generate);
+    void generate_river(vvi& map_to_generate);
+    void generate_mountains(vvi& map_to_generate);
+    void place_cities(vvi& map_to_generate);
 public:
-    Aim* aim = nullptr;
     size_t x_size;
     size_t y_size;
-    Field(size_t x_size, size_t y_size);;
-    std::vector<Cell*>& operator[](size_t x);
-    const std::vector<Cell*>& operator[](size_t x) const;
-    void print();
+    Field(size_t x_size, size_t y_size);
+    Field(MapPresets preset);
+    std::vector<Cell*>& operator [] (size_t x);
+    const std::vector<Cell*>& operator [] (size_t x) const;
 
     bool cellIsFree(int x, int y);
 };
 
 
-
-
-class Aim {
-    Unit_<Cell>* unit;
-    size_t x_size;
-    size_t y_size;
-    void move(int delta_x, int delta_y);
-public:
-    size_t x;
-    size_t y;
-    explicit Aim(Unit_<Cell>* unit);
-    void move_up();;
-    void move_down();;
-    void move_left();;
-    void move_right();;
-    void attack();
-    ~Aim();
-};
-
-
-
-using Unit = Unit_<Cell>;
-using Structure = Structure_<Cell>;
-using NonExistentUnit = NonExistentUnit_<Cell>;
-using Clubber = Clubber_<Cell>;
-using Landscape = Landscape_<Cell>;
-using Grass = Grass_<Cell>;
-using River = River_<Cell>;
-
-template<typename UnitType>
-void emplaceUnit(Cell* cell) {
-    if (cell -> isAllowedToGoIn()) {
-        delete cell->located_unit;
-        //cell->located_unit = new UnitType(cell);
-    }
-}
-
-
-template<typename StructureType>
-void emplaceStructure(Cell* cell) {
-    delete cell -> located_structure;
-    //cell -> located_structure = new StructureType(cell);
-}
 
 
