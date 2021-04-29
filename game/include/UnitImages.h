@@ -3,5 +3,9 @@
 enum UnitImages {
     NonExistentUnitImage,
     ClubberImage,
-    WorkerImage
+    WorkerImage,
+    ArcherImage,
+	CavaleryImage,
+    HorseArcherImage,
+    CatapultImage
 };

@@ -20,6 +20,7 @@ public:
     void calcIncome();
     void insertUnit(Unit* unit);
     void insertStructure(Structure* structure);
+    void refreshUnits();
     ~Treasury() = default;
 };
 

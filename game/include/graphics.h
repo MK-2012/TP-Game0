@@ -9,6 +9,7 @@
 #include "Cursor.h"
 #include "Player.h"
 #include <string>
+#include <gtk/gtk.h>
 
 std::string path_to_image(StructureImages image);
 std::string path_to_image(UnitImages image);
@@ -43,5 +44,4 @@ public:
     void allField();
     void cursorPaint(size_t x, size_t y, CursorImages image);
     static PlayerPainter& get(PlayerEnum player, Field& field);
-//  void clear_aim(size_t x, size_t y); {
 };

@@ -1,4 +1,4 @@
-# - Try to find Cairo
+ # - Try to find Cairo
 # Once done, this will define
 #
 #  CAIRO_FOUND - system has Cairo

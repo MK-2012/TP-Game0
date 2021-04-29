@@ -15,6 +15,7 @@ struct UnitTreasury {
     static void set(PlayerEnum player, UnitTreasury* unit_treasury);
     static UnitTreasury& get(PlayerEnum player);
     static void erase(PlayerEnum player, Unit* unit);
+    void refreshUnits();
 private:
     static std::vector<UnitTreasury*> unit_treasures;
 };

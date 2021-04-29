@@ -6,6 +6,6 @@ else
 	mkdir $1
 	cd $1
 	cmake ${current_dir}
-	make
+	make -j$(nproc)
 fi
 

@@ -12,6 +12,9 @@ std::string path_to_image(StructureImages image) {
 		case MemeFabricImage: {
             return std::string(IMAGE_DIR) + "structures/memefabric.png";
 		}
+		case MountainImage: {
+			return std::string(IMAGE_DIR) + "structures/Mountains1.png";
+		}
 	}
 }
 std::string path_to_image(UnitImages image) {
@@ -24,6 +27,18 @@ std::string path_to_image(UnitImages image) {
 		}
         case WorkerImage: {
             return std::string(IMAGE_DIR) + "units/worker.png";
+        }
+        case ArcherImage: {
+            return std::string(IMAGE_DIR) + "units/archer.png";
+        }
+        case CavaleryImage: {
+            return std::string(IMAGE_DIR) + "units/cavalery.png";
+        }
+        case CatapultImage: {
+            return std::string(IMAGE_DIR) + "units/catapult.png";
+        }
+        case HorseArcherImage: {
+			return std::string(IMAGE_DIR) + "units/horsearcher.png";
         }
 	}
 }
@@ -72,7 +87,9 @@ void PlayerPainter::operator()(const Cell* cell) {
 }
 
 void PlayerPainter::show() {
+
 	cairo_surface_write_to_png(surface, "canvas.png");
+
 }
 
 void PlayerPainter::allField() {
@@ -123,7 +140,6 @@ void PlayerPainter::cursorPaint(size_t x, size_t y, CursorImages image) {
 
 PlayerPainter &PlayerPainter::get(PlayerEnum player, Field& field) {
     int num = playerNum(player);
-    // std::cout << "\n" << num << "\n";
     if(created[num]) {
         return *painters[num];
     } else {
@@ -132,25 +148,3 @@ PlayerPainter &PlayerPainter::get(PlayerEnum player, Field& field) {
         return *painters[num];
     }
 }
-//	  template<typename Field>
-//	  void PlayerPainter<Field>::cursorPaint(size_t x, size_t y, CursorImages image) {
-//		  cairo_t *cr;
-//        cr = cairo_create(surface);
-//        cairo_set_line_width(cr,1);
-//        cairo_set_source_rgb(cr, 0, 0, 0);
-//
-//        cairo_move_to(cr, x * 20 + 0.5, y * 20 + 0.5);
-//        cairo_line_to(cr, x * 20 + 19.5, y * 20 + 0.5);
-//
-//        cairo_move_to(cr, x * 20 + 19.5, y * 20 + 0.5);
-//        cairo_line_to(cr, x * 20 + 19.5, y * 20 + 19.5);
-//
-//        cairo_move_to(cr, x * 20 + 19.5, y * 20 + 19.5);
-//        cairo_line_to(cr, x * 20 + 0.5, y * 20 + 19.5);
-//
-//        cairo_move_to(cr, x * 20 + 0.5, y * 20 + 19.5);
-//        cairo_line_to(cr, x * 20 + 0.5, y * 20 + 0.5);
-//
-//        cairo_stroke(cr);
-//        cairo_destroy(cr);
-//    }

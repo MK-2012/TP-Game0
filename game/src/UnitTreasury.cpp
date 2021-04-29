@@ -21,4 +21,8 @@ void UnitTreasury::erase(PlayerEnum player, Unit *unit) {
     tr.units.erase(unit);
 }
 
-
+void UnitTreasury::refreshUnits() {
+	for (auto& unit: units) {
+		unit->clearMotions();
+	}
+}

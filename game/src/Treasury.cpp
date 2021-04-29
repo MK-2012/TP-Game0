@@ -38,4 +38,6 @@ void Treasury::calcIncome() {
     }
 }
 
-
+void Treasury::refreshUnits() {
+	units.refreshUnits();
+}

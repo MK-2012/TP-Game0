@@ -3,14 +3,11 @@
 Player::Player(Field &field, PlayerEnum number): control(field, number), number(number), treasury(number) {}
 
 Player &Player::get(PlayerEnum player, Field &field) {
-    // std::cout << "\n " << playerNum(player) <<" player " << playerNum(player);
     if (created[playerNum(player)]) {
-        // std::cout << " " << (players[playerNum(player)]) << "\n";
         return *(players[playerNum(player)]);
     } else {
         created[playerNum(player)] = true;
         players[playerNum(player)] = new Player(field, player);
-        // std::cout << " " << (players[playerNum(player)]) << "\n";
         return *(players[playerNum(player)]);
     }
 }

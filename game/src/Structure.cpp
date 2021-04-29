@@ -1,25 +1,34 @@
 #include "Structure.h"
 
-Structure::Structure(PlayerEnum player): player_(player){}
-
-std::string Structure::name() {
-    return "Structure";
+Structure::Structure(PlayerEnum player, int hp): player_(player), hp_(hp){}
+int Structure::hp() {
+    return hp_;
 }
+
+const std::string Structure::name = "Structure";
+
 
 int Structure::income() {
     return 0;
 }
 
-
-Landscape::Landscape(PlayerEnum player): Structure(player){}
-
-std::string Landscape::name() {
-    return "Landscape";
+const std::string &Structure::get_name() {
+    return name;
 }
+
+
+Landscape::Landscape(PlayerEnum player, int hp): Structure(player, hp){}
+
+const std::string Landscape::name = "Landscape";
+
+const std::string &Landscape::get_name() {
+    return name;
+}
+
 
 Landscape::~Landscape() = default;
 
-Grass::Grass(PlayerEnum player): Landscape(player) {}
+Grass::Grass(PlayerEnum player, int hp): Landscape(player, hp) {}
 const StructureImages Grass::image_placement_ = GrassImage;
 
 StructureImages Grass::image() {
@@ -30,9 +39,12 @@ bool Grass::isAllowedToGoIn() {
     return true;
 }
 
-std::string Grass::name() {
-    return "Grass";
+const std::string Grass::name = "Grass";
+
+const std::string &Grass::get_name() {
+    return name;
 }
+
 
 Grass::~Grass() = default;
 
@@ -48,13 +60,37 @@ bool River::isAllowedToGoIn() {
 
 River::~River() = default;
 
-River::River(PlayerEnum player): Landscape(player){}
+River::River(PlayerEnum player, int hp): Landscape(player, hp){}
 
-std::string River::name() {
-    return "River";
+const std::string River::name = "River";
+
+const std::string &River::get_name() {
+    return name;
 }
 
-MemeFabric::MemeFabric(PlayerEnum player): Grass(player) {}
+
+const StructureImages Mountains::image_placement_ = MountainImage;
+
+StructureImages Mountains::image() {
+	return image_placement_;
+}
+
+bool Mountains::isAllowedToGoIn() {
+	return false;
+}
+
+Mountains::~Mountains() = default;
+
+Mountains::Mountains(PlayerEnum player, int hp): Landscape(player, hp){}
+
+const std::string Mountains::name = "Mountains";
+
+const std::string &Mountains::get_name() {
+    return name;
+}
+
+
+MemeFabric::MemeFabric(PlayerEnum player, int hp): Grass(player, hp) {}
 const StructureImages MemeFabric::image_placement_ = MemeFabricImage;
 
 StructureImages MemeFabric::image() {
@@ -65,12 +101,16 @@ bool MemeFabric::isAllowedToGoIn() {
     return true;
 }
 
-std::string MemeFabric::name() {
-    return "MemeFabric";
-}
+const std::string MemeFabric::name = "MemeFabric";
+
 
 int MemeFabric::income() {
     return 5;
 }
+
+const std::string &MemeFabric::get_name() {
+    return name;
+}
+
 
 MemeFabric::~MemeFabric() = default;
