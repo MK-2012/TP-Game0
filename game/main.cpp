@@ -157,6 +157,8 @@ void playTurn(Player *player, Stream &input, PlayerPainter *paint, Field &field)
                     case 'v':
                         emplaceUnit<Cavalery>(*player);
                         break;
+                    case 't':
+                        emplaceUnit<Catapult>(*player);
 //                    case 'h':
 //                        emplaceUnit<HorseArcher>(*player);
 //                        break;
