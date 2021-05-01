@@ -14,6 +14,7 @@ endif()
 include_directories(${CAIRO_INCLUDE_DIRS})
 include_directories(${GTK_INCLUDE_DIR})
 include_directories(${CMAKE_SOURCE_DIR}/include)
+include_directories(${CMAKE_SOURCE_DIR})
 add_executable(game ${SOURCE_FILES})
 target_compile_definitions(game PUBLIC IMAGE_DIR="${CMAKE_SOURCE_DIR}/images/")
 

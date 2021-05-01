@@ -32,13 +32,13 @@ namespace rmPointer {
 class PlayerPainter {
     const Field& field;
     const Player& player_;
-    cairo_surface_t *surface;
     const static uint64_t cell_size;
     const static uint64_t border_width;
     static std::vector<PlayerPainter*> painters;
     static std::vector<bool> created;
     PlayerPainter(const Player& player);
 public:
+    cairo_surface_t *surface;
     void operator () (const Cell* cell);
     void show();
     void allField();
