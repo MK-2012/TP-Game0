@@ -14,5 +14,6 @@ int main(int argc, char **argv) {
 	//turn_on(argc, argv);
     Application app(player, paint, field);
     app.run(argc, argv);
+
     return 0;
 }

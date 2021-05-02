@@ -38,6 +38,11 @@ bool Cell::isAllowedToGoIn() const {
 	return !(located_unit -> existence()) && located_structure -> isAllowedToGoIn();
 }
 
+Cell::~Cell() {
+    delete located_unit;
+    delete located_structure;
+}
+
 
 void Field::generate_river(vvi& map_to_generate) {
 	Rivers rivers(map_to_generate);
@@ -148,3 +153,4 @@ Field::Field(MapPresets preset) {
 		}
 	}
 }
+

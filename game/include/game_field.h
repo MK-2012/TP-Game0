@@ -46,6 +46,7 @@ public:
     Structure* located_structure;
     Cell(Field &field, int x, int y, int cell_type);
     bool isAllowedToGoIn() const;
+    ~ Cell();
 };
 
 
@@ -69,6 +70,7 @@ public:
     const std::vector<Cell*>& operator [] (size_t x) const;
 
     bool cellIsFree(int x, int y);
+    ~Field() = default;
 };
 
 

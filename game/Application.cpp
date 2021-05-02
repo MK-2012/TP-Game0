@@ -7,6 +7,12 @@ bool aimControl(Player &player, PlayerPainter &paint, const std::string &command
 
 void playTurn(Player *player, PlayerPainter *paint, const std::string &command_line);
 
+bool KeyAimC(Player &player, PlayerPainter &paint, char);
+
+std::pair<bool, bool> KeyPlayTurn(Player *player, PlayerPainter *paint, char);
+
+void creation(Player *player, PlayerPainter *paint, char unit);
+
 class CantBuild : public std::exception {
 public:
     std::string what() {
@@ -138,12 +144,16 @@ public:
         next_turn = reinterpret_cast<GtkButton *>(gtk_button_new_with_label("next\nturn"));
         action = reinterpret_cast<GtkButton *>(gtk_button_new_with_label("action"));
         g_signal_connect(b_up, "clicked", G_CALLBACK(Application::wind_up), nullptr);
+        auto *key = reinterpret_cast<GtkEventControllerKey *>(gtk_event_controller_key_new(
+                reinterpret_cast<GtkWidget *>(window)));
         g_signal_connect(b_down, "clicked", G_CALLBACK(wind_down), nullptr);
         g_signal_connect(b_left, "clicked", G_CALLBACK(wind_left), nullptr);
         g_signal_connect(b_right, "clicked", G_CALLBACK(wind_right), nullptr);
         g_signal_connect(run_com, "clicked", G_CALLBACK(run_command), nullptr);
         g_signal_connect(next_turn, "clicked", G_CALLBACK(change_turn), nullptr);
         g_signal_connect(action, "clicked", G_CALLBACK(aim_swap), nullptr);
+        g_signal_connect(key, "key-pressed", G_CALLBACK(user_function), nullptr);
+
         gtk_grid_attach(grid, reinterpret_cast<GtkWidget *>(b_up), 0, 0, 1, 1);
         gtk_grid_attach(grid, reinterpret_cast<GtkWidget *>(b_down), 0, 1, 1, 1);
         gtk_grid_attach(grid, reinterpret_cast<GtkWidget *>(b_left), 0, 2, 1, 1);
@@ -159,26 +169,83 @@ public:
         gtk_widget_show_all(reinterpret_cast<GtkWidget *>(window));
     }
 
+    static void up(GtkWidget *button,
+                   gpointer user_data) {
+       up();
+    }
+
+    static void down(GtkWidget *button,
+                     gpointer user_data) {
+        down();
+    }
+
+    static void left(GtkWidget *button,
+                     gpointer user_data) {
+        left();
+    }
+
+    static void right(GtkWidget *button,
+                      gpointer user_data) {
+        right();
+    }
+
+    static void up() {
+        player_->control.move_up();
+        Application::show();
+    }
+
+    static void down() {
+        player_->control.move_down();
+        Application::show();
+    }
+
+    static void left() {
+        player_->control.move_left();
+        Application::show();
+    }
+
+    static void right() {
+        player_->control.move_right();
+        Application::show();
+    }
+
+
     static void wind_up(GtkWidget *button,
                         gpointer user_data) {
-        -- --y;
-        Application::show();
+        wind_up();
     }
 
     static void wind_down(GtkWidget *button,
                           gpointer user_data) {
-        ++ ++y;
-        Application::show();
+        wind_down();
     }
 
     static void wind_right(GtkWidget *button,
                            gpointer user_data) {
-        ++ ++x;
-        Application::show();
+        wind_right();
     }
 
     static void wind_left(GtkWidget *button,
                           gpointer user_data) {
+        wind_left();
+    }
+
+    static void wind_up() {
+        -- --y;
+        Application::show();
+    }
+
+    static void wind_down() {
+        ++ ++y;
+        Application::show();
+    }
+
+    static void wind_right() {
+        ++ ++x;
+        Application::show();
+    }
+
+    static void wind_left() {
         -- --x;
         Application::show();
     }
@@ -188,6 +255,46 @@ public:
         turn(gtk_entry_buffer_get_text(buffer));
         gtk_entry_buffer_delete_text(buffer, 0, gtk_entry_buffer_get_length(buffer));
         show();
+    }
+
+    static gboolean
+    user_function(GtkEventControllerKey *controller,
+                  guint keyval,
+                  guint keycode,
+                  GdkModifierType state,
+                  gpointer user_data) {
+        //std::cout << keyval << char(keyval) << '\t' << keycode << '\n';
+        switch (keyval) {
+            case 65362:
+                wind_up();
+                return TRUE;
+            case 65361:
+                wind_left();
+                return TRUE;
+            case 65364:
+                wind_down();
+                return TRUE;
+            case 65363:
+                wind_right();
+                return TRUE;
+        }
+        if (aim_controll) {
+            if (KeyAimC(*player_, *painter_, char(keyval))) {
+                aim_swap(nullptr, nullptr);
+            }
+        } else if( !construct) {
+            auto res = KeyPlayTurn(player_, painter_, char(keyval));
+            if (res.first) {
+                aim_swap(nullptr, nullptr);
+            } else if (res.second) {
+                construct = true;
+            }
+        } else {
+            creation(player_, painter_, char(keyval));
+            construct = false;
+        }
+        show();
+        return TRUE;
     }
 
     static void change_turn(GtkWidget *button, gpointer) {
@@ -214,8 +321,11 @@ public:
                          gpointer user_data) {
         if (player_->control.unit_attached) {
             aim_controll = !aim_controll;
-            if(aim_controll) {
+            if (aim_controll) {
                 player_->aim = new Aim(player_->control);
+            } else {
+                delete player_->aim;
+                player_->aim = nullptr;
             }
             show();
         }
@@ -248,15 +358,14 @@ public:
 
     static void turn(const std::string &command) {
         if (aim_controll) {
-            if(aimControl(*player_, *painter_, command)) {
-                delete player_->aim;
-                player_ ->aim = nullptr;
-                aim_controll = !aim_controll;
+            if (aimControl(*player_, *painter_, command)) {
+                aim_swap(nullptr, nullptr);
             }
         } else {
             playTurn(player_, painter_, command);
+            playTurn(player_, painter_, command);
+            show();
         }
-        show();
     }
 
     static GtkWindow *window;
@@ -272,6 +381,7 @@ public:
     static GtkEntry *entry;
     static GtkEntryBuffer *buffer;
     static bool aim_controll;
+    static bool construct;
     static int player_num;
 private:
 };
@@ -289,7 +399,132 @@ int Application::player_num = 1;
 int Application::x = 0;
 int Application::y = 0;
 bool Application::aim_controll = false;
+bool Application::construct = false;
 
+
+bool KeyAimC(Player &player, PlayerPainter &paint, char command) {
+
+    Aim &aim = *player.aim;
+    bool quit = false;
+
+    switch (command) {
+        case 'q':
+            return true;
+        case 'w':
+            aim.move_up();
+            break;
+        case 'a':
+            aim.move_left();
+            break;
+        case 's':
+            aim.move_down();
+            break;
+        case 'd':
+            aim.move_right();
+            break;
+        case '\n':
+            paint.allField();
+            paint.show();
+            break;
+        case 'f':
+            aim.attack();
+            break;
+        case 'c': {
+            try {
+                emplaceStructure<MemeFabric>(player);
+                std::cout << " constr";
+            } catch (CantBuild exc) {
+                std::cout << exc.what();
+            }
+            break;
+        }
+    }
+
+    return quit;
+}
+
+void creation(Player *player, PlayerPainter *paint, char unit) {
+    switch (unit) {
+        case 'c':
+            emplaceUnit<Clubber>(*player);
+            break;
+        case 'w':
+            emplaceUnit<Worker>(*player);
+            break;
+        case 'a':
+            emplaceUnit<Archer>(*player);
+            break;
+        case 'v':
+            emplaceUnit<Cavalery>(*player);
+            break;
+        case 'h':
+            emplaceUnit<HorseArcher>(*player);
+            break;
+        default: {
+            break;
+        }
+    }
+}
+
+std::pair<bool, bool> KeyPlayTurn(Player *player, PlayerPainter *paint, char command) {
+    Cursor *cursor = &player->control;
+    switch (command) {
+        case 'q':
+            //g_object_unref (app_);
+            break;
+        case 'w':
+            cursor->move_up();
+            break;
+        case 'a':
+            cursor->move_left();
+            break;
+        case 's':
+            cursor->move_down();
+            break;
+        case 'd':
+            cursor->move_right();
+            break;
+
+        case 'e': {
+            if (cursor->unit_attached) {
+                cursor->detachUnit();
+            } else {
+                try {
+                    cursor->attachUnit();
+                } catch (UnitAttachingException error) {
+                    std::cout << error.what();
+                }
+            }
+            break;
+        }
+        case '\n':
+            paint->allField();
+            paint->show();
+            break;
+        case 'l':
+            for (auto i: player->treasury.units.units) {
+                std::cout << " " << i->name() << " ";
+            }
+            break;
+        case 'i': {
+            auto *unit = cursor->get_cell()->located_unit;
+            auto *structure = cursor->get_cell()->located_structure;
+            std::cout << "Unit:\t\t" << unit->name() << "\n";
+            std::cout << "\t\t" << unit->hp() << "\n\n";
+            std::cout << "Structure:\t" << structure->name << "\n";
+            std::cout << "\t\t" << structure->hp() << "\n\n";
+        }
+            break;
+        case 'f':
+            return std::make_pair(true, false);
+        case 'n':
+            return std::make_pair(false, true);
+        default: {
+            break;
+        }
+    }
+    return std::make_pair(false, false);
+}
 
 bool aimControl(Player &player, PlayerPainter &paint, const std::string &command_line) {
 
