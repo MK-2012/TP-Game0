@@ -3,6 +3,8 @@ project(libraries)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 
 
 include_directories(${CMAKE_SOURCE_DIR}/include)
@@ -36,6 +38,8 @@ string(REPLACE ";" " -I" FLAGS "${FLAGS}")
 set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} ${GTK3_FLAGS} ${FLAGS})
 
 
+
+
 link_directories(${CAIRO_LIBRARY_DIRS})
 link_directories(${GTK3_LIBRARY_DIRS})
 target_link_libraries(Graphics ${CAIRO_LIBRARIES})
@@ -55,3 +59,7 @@ target_link_libraries(Cursor StructureTreasury)
 target_link_libraries(Cursor UnitTreasury)
 target_link_libraries(Treasury UnitTreasury)
 target_link_libraries(Treasury StructureTreasury)
+
+install(TARGETS Unit Structure GameField Graphics Cursor Treasury Player UnitTreasury StructureTreasury Rivers
+	LIBRARY DESTINATION /usr/share/simplegame/lib
+	)
