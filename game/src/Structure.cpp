@@ -16,6 +16,10 @@ const std::string &Structure::get_name() {
     return name;
 }
 
+const bool Structure::isCity() {
+	return false;
+}
+
 
 Landscape::Landscape(PlayerEnum player, int hp): Structure(player, hp){}
 
@@ -114,3 +118,28 @@ const std::string &MemeFabric::get_name() {
 
 
 MemeFabric::~MemeFabric() = default;
+
+
+const StructureImages City::image_placement_ = CityImage;
+
+StructureImages City::image() {
+	return image_placement_;
+}
+
+bool City::isAllowedToGoIn() {
+	return true;
+}
+
+City::~City() = default;
+
+City::City(PlayerEnum player, int hp): Landscape(player, hp){}
+
+const std::string City::name = "City";
+
+const std::string& City::get_name() {
+	return name;
+}
+
+const bool City::isCity() {
+	return true;
+}

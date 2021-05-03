@@ -15,6 +15,9 @@ std::string path_to_image(StructureImages image) {
 		case MountainImage: {
 			return std::string(IMAGE_DIR) + "structures/Mountains1.png";
 		}
+		case CityImage: {
+			return std::string(IMAGE_DIR) + "structures/City1.png";
+		}
 	}
 }
 std::string path_to_image(UnitImages image) {

@@ -61,6 +61,7 @@ install(
 )
 install(DIRECTORY "${CMAKE_SOURCE_DIR}/images" 
 	DESTINATION "${CMAKE_INSTALL_PREFIX}"
-	)
-message(STATUS ${CAIRO_LIBRARY_DIRS})
-message(STATUS ${CAIRO_LIBRARIES})
+)
+install(PROGRAMS "${CMAKE_SOURCE_DIR}/simplegame"
+	DESTINATION "/usr/games"
+)

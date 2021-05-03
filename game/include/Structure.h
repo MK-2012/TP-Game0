@@ -20,6 +20,8 @@ public:
     virtual const std::string& get_name();
     virtual int income();
     static const bool constructable = false;
+
+    virtual const bool isCity();
 protected:
     Structure(PlayerEnum, int);
 };
@@ -92,4 +94,17 @@ public:
     int income() override;
     static const bool constructable = true;
     ~MemeFabric() override;
+};
+
+class City: public Landscape {
+	const static StructureImages image_placement_;
+public:
+	City(PlayerEnum, int hp = 0);
+	StructureImages image() override;
+	bool isAllowedToGoIn() override;
+	static const std::string name;
+	const std::string& get_name() override;
+	static const bool constructable = false;
+	const bool isCity() override;
+	~City() override;
 };

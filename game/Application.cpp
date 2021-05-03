@@ -53,21 +53,26 @@ private:
 
 template<typename UnitType>
 void emplaceUnit(Player &player) {
-    player.treasury.checkArmy();
-    if (player.treasury.enoughMemes(UnitType::cost_)) {
-        if (!player.control.unit_attached) {
-            Cell *cell = player.control.get_cell();
-            if (cell->isAllowedToGoIn()) {
-                delete cell->located_unit;
-                cell->located_unit = new UnitType(player.number);
-                player.treasury.insertUnit(cell->located_unit);
+
+    if (player.control.get_cell()->located_structure->isCity()) {
+        player.treasury.checkArmy();
+        if (player.treasury.enoughMemes(UnitType::cost_)) {
+            if (!player.control.unit_attached) {
+                Cell *cell = player.control.get_cell();
+                if (cell->isAllowedToGoIn()) {
+                    delete cell->located_unit;
+                    cell->located_unit = new UnitType(player.number);
+                    player.treasury.insertUnit(cell->located_unit);
+                }
             }
+        } else {
+            std::cout << "\n you have " << player.treasury.memesLimit() << "TB of memes and you have already used "
+                      << player.treasury.requiredMemes() << "TB of memes and " << UnitType::name_ << " costs "
+                      << UnitType::cost_
+                      << "TB of memes";
         }
     } else {
-        std::cout << "\n you have " << player.treasury.memesLimit() << "TB of memes and you have already used "
-                  << player.treasury.requiredMemes() << "TB of memes and " << UnitType::name_ << " costs "
-                  << UnitType::cost_
-                  << "TB of memes";
+        std::cout << "You are trying to make a unit not inside the city.\n";
     }
 }
 
@@ -171,7 +176,7 @@ public:
 
     static void up(GtkWidget *button,
                    gpointer user_data) {
-       up();
+        up();
     }
 
     static void down(GtkWidget *button,
@@ -282,7 +287,7 @@ public:
             if (KeyAimC(*player_, *painter_, char(keyval))) {
                 aim_swap(nullptr, nullptr);
             }
-        } else if( !construct) {
+        } else if (!construct) {
             auto res = KeyPlayTurn(player_, painter_, char(keyval));
             if (res.first) {
                 aim_swap(nullptr, nullptr);
@@ -362,7 +367,6 @@ public:
                 aim_swap(nullptr, nullptr);
             }
         } else {
-            playTurn(player_, painter_, command);
             playTurn(player_, painter_, command);
             show();
         }
@@ -459,6 +463,8 @@ void creation(Player *player, PlayerPainter *paint, char unit) {
             break;
         case 'h':
             emplaceUnit<HorseArcher>(*player);
+            break;
+        case 'q':
             break;
         default: {
             break;
