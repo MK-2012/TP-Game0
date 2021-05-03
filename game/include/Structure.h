@@ -11,14 +11,17 @@ class Structure {
     int hp_;
 public:
     PlayerEnum player_;
-
     virtual int hp();
     //virtual bool getDamage();
     virtual StructureImages image() = 0;
     virtual ~Structure() = default;
     virtual bool isAllowedToGoIn() = 0;
-    virtual std::string name();
+    static const std::string name;
+    virtual const std::string& get_name();
     virtual int income();
+    static const bool constructable = false;
+
+    virtual const bool isCity();
 protected:
     Structure(PlayerEnum, int);
 };
@@ -29,7 +32,9 @@ public:
     Landscape(PlayerEnum, int hp = 0);
     StructureImages image() override = 0;
     bool isAllowedToGoIn() override = 0;
-    std::string name() override;
+    static const std::string name;
+    static const bool constructable = false;
+    const std::string& get_name() override;
     ~Landscape() override;
 };
 
@@ -41,7 +46,9 @@ public:
     Grass(PlayerEnum, int hp = 0);
     StructureImages image() override;
     bool isAllowedToGoIn() override;
-    std::string name() override;
+    static const std::string name;
+    const std::string& get_name() override;
+    static const bool constructable = false;
     ~Grass() override;
 };
 
@@ -55,9 +62,26 @@ public:
     River(PlayerEnum, int hp = 0);
     StructureImages image() override;
     bool isAllowedToGoIn() override;
-    std::string name() override;
+    static const std::string name;
+    const std::string& get_name() override;
+    static const bool constructable = false;
     ~River() override;
 };
+
+
+class Mountains : public Landscape {
+	const static StructureImages image_placement_;
+public:
+	Mountains(PlayerEnum, int hp = 0);
+	StructureImages image() override;
+	bool isAllowedToGoIn() override;
+    static const std::string name;
+    const std::string& get_name() override;
+    static const bool constructable = false;
+	~Mountains() override;
+};
+
+
 
 class MemeFabric : public Grass {
     const static StructureImages image_placement_;
@@ -65,7 +89,22 @@ public:
     MemeFabric(PlayerEnum, int hp = 15);
     StructureImages image() override;
     bool isAllowedToGoIn() override;
-    std::string name() override;
+    static const std::string name;
+    const std::string& get_name() override;
     int income() override;
+    static const bool constructable = true;
     ~MemeFabric() override;
+};
+
+class City: public Landscape {
+	const static StructureImages image_placement_;
+public:
+	City(PlayerEnum, int hp = 0);
+	StructureImages image() override;
+	bool isAllowedToGoIn() override;
+	static const std::string name;
+	const std::string& get_name() override;
+	static const bool constructable = false;
+	const bool isCity() override;
+	~City() override;
 };

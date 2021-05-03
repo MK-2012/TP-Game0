@@ -12,6 +12,12 @@ std::string path_to_image(StructureImages image) {
 		case MemeFabricImage: {
             return std::string(IMAGE_DIR) + "structures/memefabric.png";
 		}
+		case MountainImage: {
+			return std::string(IMAGE_DIR) + "structures/Mountains1.png";
+		}
+		case CityImage: {
+			return std::string(IMAGE_DIR) + "structures/City1.png";
+		}
 	}
 }
 std::string path_to_image(UnitImages image) {
@@ -33,6 +39,9 @@ std::string path_to_image(UnitImages image) {
         }
         case CatapultImage: {
             return std::string(IMAGE_DIR) + "units/catapult.png";
+        }
+        case HorseArcherImage: {
+			return std::string(IMAGE_DIR) + "units/horsearcher.png";
         }
 	}
 }
@@ -81,7 +90,19 @@ void PlayerPainter::operator()(const Cell* cell) {
 }
 
 void PlayerPainter::show() {
-	cairo_surface_write_to_png(surface, "canvas.png");
+    cairo_surface_t *to_write =
+            cairo_surface_create_similar_image(surface, CAIRO_FORMAT_ARGB32, 30*cell_size,
+                                               30*cell_size);
+    cairo_t *cr;
+    cr = cairo_create(to_write);
+
+    cairo_rectangle(cr, 0, 0, 30*cell_size, 30*cell_size);
+    cairo_set_source_surface(cr, surface, 0*int(cell_size), 0*int(cell_size));
+    cairo_fill(cr);
+    cairo_destroy(cr);
+
+    cairo_surface_write_to_png(to_write, "canvas.png");
+    cairo_surface_destroy(to_write);
 }
 
 void PlayerPainter::allField() {
@@ -131,6 +152,7 @@ void PlayerPainter::cursorPaint(size_t x, size_t y, CursorImages image) {
 }
 
 PlayerPainter &PlayerPainter::get(PlayerEnum player, Field& field) {
+
     int num = playerNum(player);
     if(created[num]) {
         return *painters[num];

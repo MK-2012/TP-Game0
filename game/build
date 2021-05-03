@@ -7,5 +7,6 @@ else
 	cd $1
 	cmake ${current_dir}
 	make -j$(nproc)
+	make install
 fi
 
