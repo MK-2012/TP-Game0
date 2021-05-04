@@ -1,0 +1,26 @@
+/home/mikhail_2012/clion-2020.3.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=/bin/g++ -G "CodeBlocks - Unix Makefiles" /home/mikhail_2012/TP-Game0-dev/game
+-- The C compiler identification is GNU 10.2.0
+-- The CXX compiler identification is GNU 10.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /bin/g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found PkgConfig: /usr/bin/pkg-config (found version "1.7.3") 
+-- Checking for module 'cairo'
+--   Found cairo, version 1.17.4
+-- Found Cairo: /usr/include/cairo  
+-- Checking for module 'gtk+-3.0'
+--   Found gtk+-3.0, version 3.24.29
+-- Flags: -I/usr/include/gtk-3.0;/usr/include/pango-1.0;/usr/include/glib-2.0;/usr/lib/glib-2.0/include;/usr/include/harfbuzz;/usr/include/freetype2;/usr/include/libpng16;/usr/include/libmount;/usr/include/blkid;/usr/include/fribidi;/usr/include/cairo;/usr/include/lzo;/usr/include/pixman-1;/usr/include/gdk-pixbuf-2.0;/usr/include/gio-unix-2.0;/usr/include/cloudproviders;/usr/include/atk-1.0;/usr/include/at-spi2-atk/2.0;/usr/include/dbus-1.0;/usr/lib/dbus-1.0/include;/usr/include/at-spi-2.0
+-- Found Freetype: /usr/lib/libfreetype.so (found version "2.10.4") 
+-- Found GTK3_GTK: /usr/lib/libgtk-3.so  
+-- Flags: -I/usr/include/gtk-3.0;/usr/include/pango-1.0;/usr/include/glib-2.0;/usr/lib/glib-2.0/include;/usr/include/harfbuzz;/usr/include/freetype2;/usr/include/libpng16;/usr/include/libmount;/usr/include/blkid;/usr/include/fribidi;/usr/include/cairo;/usr/include/lzo;/usr/include/pixman-1;/usr/include/gdk-pixbuf-2.0;/usr/include/gio-unix-2.0;/usr/include/cloudproviders;/usr/include/atk-1.0;/usr/include/at-spi2-atk/2.0;/usr/include/dbus-1.0;/usr/lib/dbus-1.0/include;/usr/include/at-spi-2.0;/usr/include
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug

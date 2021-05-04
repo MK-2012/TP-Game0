@@ -14,7 +14,8 @@ const char* UnitAttachingException::what() const noexcept {
 //0 - grass
 //1 - river
 //2 - mountains
-//3 - city
+//3 - city 1
+//4 - city 2
 Cell::Cell(Field& field, int x, int y, int cell_type): x(x), y(y), field(field), located_unit(new NonExistentUnit(Nobody)) {
 	switch(cell_type) {
 		case 0: {
@@ -30,7 +31,11 @@ Cell::Cell(Field& field, int x, int y, int cell_type): x(x), y(y), field(field),
 			break;
 		}
 		case 3: {
-			located_structure = new City(Nobody);
+			located_structure = new City(Player1);
+			break;
+		}
+		case 4: {
+			located_structure = new City(Player2);
 			break;
 		}
 		default: {
@@ -40,7 +45,7 @@ Cell::Cell(Field& field, int x, int y, int cell_type): x(x), y(y), field(field),
 };
 
 bool Cell::isAllowedToGoIn() const {
-	return !(located_unit -> existence()) && located_structure -> isAllowedToGoIn();
+	return !(located_unit->existence()) && located_structure->isAllowedToGoIn();
 }
 
 Cell::~Cell() {
@@ -81,10 +86,10 @@ Field::Field(size_t x_size, size_t y_size): x_size(x_size), y_size(y_size), fiel
 	}
 }
 
-std::vector<Cell *> & Field::operator[](size_t x) {
+std::vector<Cell*> & Field::operator[](size_t x) {
 	return field[x];
 }
-const std::vector<Cell *> & Field::operator[](size_t x) const {
+const std::vector<Cell*> & Field::operator[](size_t x) const {
 	return field[x];
 }
 bool Field::cellIsFree(int x, int y) {
@@ -128,9 +133,9 @@ vvi standard_map = {{2, 2, 2, 2, 2, 0, 0, 1, 0, 0, 0, 2, 2, 2, 2, 1, 0, 0, 2, 2,
 					{0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0},
 					{2, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 2},
 					{2, 0, 0, 0, 0, 0, 1, 0, 2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 2},
-					{2, 0, 0, 0, 0, 1, 1, 1, 0, 2, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 3, 3, 3, 0, 2, 2},
-					{0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 3, 3, 3, 0, 2, 2},
-					{2, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 3, 3, 3, 0, 0, 2},
+					{2, 0, 0, 0, 0, 1, 1, 1, 0, 2, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 4, 4, 4, 0, 2, 2},
+					{0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 4, 4, 4, 0, 2, 2},
+					{2, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 4, 4, 4, 0, 0, 2},
 					{2, 2, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 2},
 					{2, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 0, 2, 2, 2, 1, 2, 2, 2, 2, 0, 2, 2},
 					{2, 2, 2, 1, 2, 0, 0, 1, 0, 0, 0, 2, 2, 2, 2, 0, 1, 1, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2},

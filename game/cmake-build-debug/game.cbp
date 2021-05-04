@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="game"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\src\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="game">
+				<Option output="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/game" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DIMAGE_DIR=&quot;../images/&quot;"/>
+					<Add option="-DIMAGE_DIR=&quot;/home/mikhail_2012/TP-Game0-dev/game/images/&quot;"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game/include"/>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 game"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="game/fast">
+				<Option output="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/game" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DIMAGE_DIR=&quot;../images/&quot;"/>
+					<Add option="-DIMAGE_DIR=&quot;/home/mikhail_2012/TP-Game0-dev/game/images/&quot;"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game/include"/>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 game/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="GameField">
+				<Option output="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/libGameField.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 GameField"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="GameField/fast">
+				<Option output="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/libGameField.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 GameField/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Unit">
+				<Option output="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/libUnit.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 Unit"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Unit/fast">
+				<Option output="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/libUnit.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 Unit/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Player">
+				<Option output="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/libPlayer.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 Player"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Player/fast">
+				<Option output="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/libPlayer.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 Player/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Cursor">
+				<Option output="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/libCursor.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 Cursor"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Cursor/fast">
+				<Option output="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/libCursor.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 Cursor/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Graphics">
+				<Option output="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/libGraphics.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DIMAGE_DIR=&quot;/home/mikhail_2012/TP-Game0-dev/game/images/&quot;"/>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 Graphics"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Graphics/fast">
+				<Option output="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/libGraphics.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DIMAGE_DIR=&quot;/home/mikhail_2012/TP-Game0-dev/game/images/&quot;"/>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 Graphics/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UnitTreasury">
+				<Option output="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/libUnitTreasury.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 UnitTreasury"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="UnitTreasury/fast">
+				<Option output="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/libUnitTreasury.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 UnitTreasury/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Structure">
+				<Option output="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/libStructure.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 Structure"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Structure/fast">
+				<Option output="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/libStructure.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 Structure/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="StructureTreasury">
+				<Option output="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/libStructureTreasury.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 StructureTreasury"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="StructureTreasury/fast">
+				<Option output="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/libStructureTreasury.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 StructureTreasury/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Treasury">
+				<Option output="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/libTreasury.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 Treasury"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Treasury/fast">
+				<Option output="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/libTreasury.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 Treasury/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Rivers">
+				<Option output="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/libRivers.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 Rivers"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Rivers/fast">
+				<Option output="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/libRivers.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mikhail_2012/TP-Game0-dev/game/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 Rivers/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/mikhail_2012/TP-Game0-dev/game/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/mikhail_2012/TP-Game0-dev/game/main.cpp">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game0-dev/game/src/Archer.cpp">
+			<Option target="Unit"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game0-dev/game/src/BasicUnits.cpp">
+			<Option target="Unit"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game0-dev/game/src/Catapult.cpp">
+			<Option target="Unit"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game0-dev/game/src/Cavalery.cpp">
+			<Option target="Unit"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game0-dev/game/src/Cursor.cpp">
+			<Option target="Cursor"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game0-dev/game/src/HorseArcher.cpp">
+			<Option target="Unit"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game0-dev/game/src/Player.cpp">
+			<Option target="Player"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game0-dev/game/src/PlayerEnum.cpp">
+			<Option target="Cursor"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game0-dev/game/src/Rivers.cpp">
+			<Option target="Rivers"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game0-dev/game/src/Structure.cpp">
+			<Option target="Structure"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game0-dev/game/src/StructureTreasury.cpp">
+			<Option target="StructureTreasury"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game0-dev/game/src/Treasury.cpp">
+			<Option target="Treasury"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game0-dev/game/src/UnitTreasury.cpp">
+			<Option target="UnitTreasury"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game0-dev/game/src/game_field.cpp">
+			<Option target="GameField"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game0-dev/game/src/graphics.cpp">
+			<Option target="Graphics"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game0-dev/game/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game0-dev/game/cmake/FindCairo.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game0-dev/game/cmake/FindGTK3_GTK.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/mikhail_2012/TP-Game0-dev/game/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

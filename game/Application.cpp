@@ -54,7 +54,7 @@ private:
 template<typename UnitType>
 void emplaceUnit(Player &player) {
 
-    if (player.control.get_cell()->located_structure->isCity()) {
+    if ((player.control.get_cell()->located_structure->isCity()) && (player.control.get_cell()->located_structure->player_ == player.number)) {
         player.treasury.checkArmy();
         if (player.treasury.enoughMemes(UnitType::cost_)) {
             if (!player.control.unit_attached) {
@@ -72,7 +72,7 @@ void emplaceUnit(Player &player) {
                       << "TB of memes";
         }
     } else {
-        std::cout << "You are trying to make a unit not inside the city.\n";
+        std::cout << "You are trying to make a unit not inside the city or this city is not yours.\n";
     }
 }
 
