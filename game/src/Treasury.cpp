@@ -33,8 +33,9 @@ void Treasury::insertStructure(Structure *structure) {
 }
 
 void Treasury::calcIncome() {
+    memes_limit_ = 4;
     for (auto i: structures.structures) {
-        gold += i -> income();
+        memes_limit_ += i -> income();
     }
 }
 

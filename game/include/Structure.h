@@ -12,16 +12,21 @@ class Structure {
 public:
     PlayerEnum player_;
     virtual int hp();
-    //virtual bool getDamage();
+    virtual bool getDamage(int damage);
     virtual StructureImages image() = 0;
     virtual ~Structure() = default;
     virtual bool isAllowedToGoIn() = 0;
     static const std::string name;
     virtual const std::string& get_name();
+    virtual bool get_damage(int);
     virtual int income();
     static const bool constructable = false;
 
+    virtual bool isConstructable();
     virtual const bool isCity();
+    static std::string parent;
+
+    virtual Structure * newParent();
 protected:
     Structure(PlayerEnum, int);
 };
@@ -34,6 +39,7 @@ public:
     bool isAllowedToGoIn() override = 0;
     static const std::string name;
     static const bool constructable = false;
+    bool isConstructable() override;
     const std::string& get_name() override;
     ~Landscape() override;
 };
@@ -49,6 +55,7 @@ public:
     static const std::string name;
     const std::string& get_name() override;
     static const bool constructable = false;
+    bool isConstructable() override;
     ~Grass() override;
 };
 
@@ -65,6 +72,7 @@ public:
     static const std::string name;
     const std::string& get_name() override;
     static const bool constructable = false;
+    bool isConstructable() override;
     ~River() override;
 };
 
@@ -78,6 +86,7 @@ public:
     static const std::string name;
     const std::string& get_name() override;
     static const bool constructable = false;
+    bool isConstructable() override;
 	~Mountains() override;
 };
 
@@ -93,7 +102,10 @@ public:
     const std::string& get_name() override;
     int income() override;
     static const bool constructable = true;
+    static std::string parent;
+    bool isConstructable() override;
     ~MemeFabric() override;
+    Structure * newParent() override;
 };
 
 class City: public Landscape {
@@ -104,7 +116,27 @@ public:
 	bool isAllowedToGoIn() override;
 	static const std::string name;
 	const std::string& get_name() override;
+
 	static const bool constructable = false;
+
+    bool isConstructable() override;
 	const bool isCity() override;
 	~City() override;
+	Structure* newParent() override;
+};
+
+class Bridge : public River {
+    const static StructureImages image_placement_;
+public:
+    Bridge(PlayerEnum, int hp = 15);
+    StructureImages image() override;
+    bool isAllowedToGoIn() override;
+    static const std::string name;
+    const std::string& get_name() override;
+    int income() override;
+    static const bool constructable = true;
+    static std::string parent;
+    bool isConstructable() override;
+    ~Bridge() override;
+    Structure * newParent() override;
 };

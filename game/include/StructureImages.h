@@ -5,5 +5,6 @@ enum StructureImages {
     RiverImage,
     MemeFabricImage,
     MountainImage,
-    CityImage
+    CityImage,
+    BridgeImage
 };

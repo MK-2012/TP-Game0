@@ -86,7 +86,8 @@ void emplaceStructure(Player &player) {
         Cell *cell = player.aim->get_cell();
         std::cout << player.control.get_cell()->located_unit->name() << "\n" << cell->located_structure->name << "\n";
         if (player.control.get_cell()->located_unit->canConstruct()) {
-            if (cell->located_structure->get_name() == "Grass") {
+            std::cout << cell->located_structure->get_name() << '\t' << StructureType::parent << "\n";
+            if (cell->located_structure->get_name() == StructureType::parent) {
                 delete cell->located_structure;
                 cell->located_structure = new StructureType(player.number);
                 player.treasury.insertStructure(cell->located_structure);
@@ -306,6 +307,8 @@ public:
         player_num = 3 - player_num;
         player_ = &(Player::get(playerNum(player_num), *field_));
         painter_ = &PlayerPainter::get(playerNum(player_num), *field_);
+        player_->treasury.calcIncome();
+        player_->treasury.refreshUnits();
         show();
     }
 
@@ -433,9 +436,21 @@ bool KeyAimC(Player &player, PlayerPainter &paint, char command) {
         case 'f':
             aim.attack();
             break;
+        case 'r':
+            aim.attackStructure();
+            break;
         case 'c': {
             try {
                 emplaceStructure<MemeFabric>(player);
+                std::cout << " constr";
+            } catch (CantBuild exc) {
+                std::cout << exc.what();
+            }
+            break;
+        }
+        case 'b': {
+            try {
+                emplaceStructure<Bridge>(player);
                 std::cout << " constr";
             } catch (CantBuild exc) {
                 std::cout << exc.what();
@@ -517,7 +532,7 @@ std::pair<bool, bool> KeyPlayTurn(Player *player, PlayerPainter *paint, char com
             auto *structure = cursor->get_cell()->located_structure;
             std::cout << "Unit:\t\t" << unit->name() << "\n";
             std::cout << "\t\t" << unit->hp() << "\n\n";
-            std::cout << "Structure:\t" << structure->name << "\n";
+            std::cout << "Structure:\t" << structure->get_name() << "\n";
             std::cout << "\t\t" << structure->hp() << "\n\n";
         }
             break;

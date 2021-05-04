@@ -44,5 +44,6 @@ public:
     CursorImages image() const override;
 
     void attack();
+    void attackStructure();
     ~Aim();
 };

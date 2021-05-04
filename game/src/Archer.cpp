@@ -8,7 +8,10 @@ uint16_t Archer::damage(PlayerEnum player) {
 	if(player == player_) {
 		return 0;
 	}
-	return damage_;
+    if (allowed_to_move()) {
+        return damage_;
+    }
+	return 0;
 }
 
 uint16_t Archer::distance() {

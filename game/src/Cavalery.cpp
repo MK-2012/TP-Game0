@@ -10,12 +10,15 @@ uint16_t Cavalery::damage(PlayerEnum player) {
 	if(player == player_) {
 		return 0;
 	}
-	if (!has_attacked) {
-		has_attacked = true;
-		return damage_ + num_of_motions * damage_multiplier;
-	} else {
-		return damage_;
-	}
+    if (allowed_to_move()) {
+        if (!has_attacked) {
+            has_attacked = true;
+            return damage_ + num_of_motions * damage_multiplier;
+        } else {
+            return damage_;
+        }
+    }
+    return 0;
 }
 
 uint16_t Cavalery::distance() {
