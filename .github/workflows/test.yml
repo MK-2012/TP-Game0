@@ -1,0 +1,55 @@
+
+name: CI
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ checkpoint_2 ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Build
+        run: |
+          cd game
+          ./run.sh build
+          cd build 
+      
+      - name: Run Tests
+        run: |
+          cd game/build
+          mkdir canvases
+          for test in $(ls ../../test_commands)
+          do
+            cat "../../test_commands/"$test | ./game 2>  "$test"_test_report.txt
+            if [[ -s "$test"_test_report.txt ]] 
+            then 
+              mv "$test"_test_report.txt canvases/"$test"_test_report.txt
+            else
+              rm "$test"_test_report.txt
+            fi
+            mv canvas.png canvases/"$test"canvas.png 
+          done
+          
+      # Runs a set of commands using the runners shell
+      - name: UploadArtifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: Canvas
+          path: |
+            game/build/canvases
+      
