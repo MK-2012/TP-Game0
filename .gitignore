@@ -3,3 +3,10 @@
 
 # Ada Library Information
 *.ali
+
+*.scf
+
+#Cmake folders
+/cmake-build-debug
+/lib
+.idea
