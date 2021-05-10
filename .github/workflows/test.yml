@@ -27,6 +27,7 @@ jobs:
       - name: Build
         run: |
           sudo apt install pkg-config
+          sudo apt-get install build-essential libgtk-3-dev
           cd game
           sudo ./build b
           cd build 
