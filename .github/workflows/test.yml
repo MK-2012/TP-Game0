@@ -26,6 +26,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Build
         run: |
+          sudo apt install pkg-config
           cd game
           sudo ./build b
           cd build 
